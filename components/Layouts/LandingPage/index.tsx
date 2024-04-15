@@ -6,16 +6,16 @@ interface LandingPageProps {
 
 const LandingPage = ({ className }: LandingPageProps) => {
   return (
-    <main
-      className={`sm:px-14 sm:py-11 ${className}  flex w-full text-primary gap-4`}
-    >
-      <div className={`flex flex-col w-full sm:w-[60%] `}>
-        <div className={`font-extrabold text-lg sm:text-5xl`}>
-          <span className={`text-4xl sm:text-6xl text-primaryOrange`}>
+    <div className={`sm:py-11 ${className}  flex w-full text-primary gap-4`}>
+      <div className={`flex flex-col w-full md:w-[60%] `}>
+        <div
+          className={`font-extrabold text-2xl md:text-5xl leading-normal tracking-wider sm:leading-loose`}
+        >
+          <span className={`text-4xl md:text-6xl text-primaryOrange`}>
             BAGOPLEK
           </span>
           {` `}ARE MADE TO BRING{` `}
-          <span className={`text-4xl sm:text-5xl text-primaryOrange`}>
+          <span className={`text-4xl md:text-5xl text-primaryOrange`}>
             HAPPINESS
           </span>
         </div>
@@ -30,7 +30,16 @@ const LandingPage = ({ className }: LandingPageProps) => {
             Order Now
           </button>
         </div>
-        <div className={`mt-40 flex items-center gap-10`}>
+        <div className={`flex items-end justify-end mt-10 md:hidden`}>
+          <Image
+            className={``}
+            src={`/bagoplek-1.png`}
+            alt=""
+            width={250}
+            height={250}
+          />
+        </div>
+        <div className={`mt-10 flex items-center gap-10 md:mt-40`}>
           <Image
             alt=""
             src={"/ic-twotone-facebook.svg"}
@@ -47,7 +56,7 @@ const LandingPage = ({ className }: LandingPageProps) => {
       </div>
 
       <div
-        className={`w-[40%] h-[780px] bg-gradient-to-br from-[#FCD848] to-[#FCD848] relative -mt-40 rounded-bl-[120px] -z-30 sm:block hidden`}
+        className={`md:w-[40%] h-[780px] bg-gradient-to-br from-[#FCD848] to-[#FCD848] relative -mt-40 rounded-bl-[120px] z-30 md:block hidden min-w-96`}
       >
         <Image
           className={`absolute bottom-0 -left-32`}
@@ -57,26 +66,26 @@ const LandingPage = ({ className }: LandingPageProps) => {
           height={409}
         />
         <Image
-          className={`absolute top-24 left-[263px]`}
+          className={`absolute top-24 right-44`}
           src={`/bagoplek-2.png`}
           alt=""
           width={235}
           height={235}
         />
         <Image
-          className={`absolute top-96 left-[312px] rotate-[132deg]`}
+          className={`absolute top-96 right-36 rotate-[132deg] -z-10`}
           src={`/bagoplek-2.png`}
           alt=""
           width={165}
           height={165}
         />
         <div
-          className={`absolute bottom-[250px] -rotate-90 left-[435px] text-6xl opacity-20 font-extrabold`}
+          className={`absolute bottom-[200px] -rotate-90 -right-28 text-6xl opacity-20 font-extrabold hidden md:block`}
         >
           BAGOPLEK
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

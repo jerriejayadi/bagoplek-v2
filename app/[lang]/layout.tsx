@@ -19,9 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={lang}>
-      <Navbar />
-      <body className={`${inter.className} + px-8 sm:px-16 py-28 bg-[#FFFDF3]`}>
-        {children}
+      <body
+        className={`${inter.className} + max-w-[1920px] mx-auto bg-[#FFFDF3]`}
+      >
+        <Navbar />
+        <main className={` py-28  `}>{children}</main>
       </body>
     </html>
   );
