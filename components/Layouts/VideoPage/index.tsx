@@ -10,7 +10,7 @@ const VideoPage = ({ className }: VideoPageProps) => {
       <div className={`flex items-end justify-center`}>
         <Image
           alt=""
-          src={`/vector.png`}
+          src={`/Vector.png`}
           className={` w-[50%]   h-full`}
           width={`500`}
           height={"100"}
