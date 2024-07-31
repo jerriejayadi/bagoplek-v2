@@ -17,6 +17,12 @@ const config: Config = {
         primary: "#68530A",
         primaryOrange: "#E16F27",
       },
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+        heavitas: ["var(--font-heavitas)"],
+        barlow: ["var(--font-barlow)"],
+        jakartaSans: ["var(--font-jakarta-sans)"],
+      },
     },
   },
   plugins: [],

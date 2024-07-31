@@ -1,9 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Barlow, Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Organism/Navbar";
+import LocalFont from "next/font/local";
+import Footer from "@/components/Layouts/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-barlow",
+});
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta-sans",
+});
+const heavitas = LocalFont({
+  src: "../../public/fonts/Heavitas.ttf",
+  display: "swap",
+  variable: "--font-heavitas",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,10 +36,11 @@ export default function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${inter.className} + max-w-[1920px] mx-auto bg-[#FFFDF3]`}
+        className={`${inter.className} ${heavitas.variable} ${barlow.variable}   max-w-[1920px] mx-auto bg-[#FFFDF3]`}
       >
         <Navbar />
         <main className={` py-28  `}>{children}</main>
+        <Footer />
       </body>
     </html>
   );

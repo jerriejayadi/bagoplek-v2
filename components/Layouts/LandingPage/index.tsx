@@ -9,7 +9,7 @@ const LandingPage = ({ className }: LandingPageProps) => {
     <div className={`sm:py-11 ${className}  flex w-full text-primary gap-4`}>
       <div className={`flex flex-col w-full md:w-[60%] `}>
         <div
-          className={`font-extrabold text-2xl md:text-5xl leading-normal tracking-wider sm:leading-loose`}
+          className={`font-heavitas font-normal text-2xl md:text-5xl md:leading-10 tracking-wider sm:leading-loose `}
         >
           <span className={`text-4xl md:text-6xl text-primaryOrange`}>
             BAGOPLEK
@@ -19,9 +19,11 @@ const LandingPage = ({ className }: LandingPageProps) => {
             HAPPINESS
           </span>
         </div>
-        <div className={`mt-6 text-lg sm:text-2xl`}>
-          Lorem ipsum dolor sit amet consectetur. Mauris viverra erat mauris
-          porta lacus mauris sed.
+        <div className={`mt-6 text-lg sm:text-2xl font-sans`}>
+          Lorem ipsum dolor sit amet consectetur. Pulvinar porttitor commodo leo
+          sapien quis praesent. Diam leo in aliquet consequat sollicitudin
+          dignissim. Lectus augue diam id nisl amet urna. Duis neque lorem
+          egestas neque cras molestie fames.
         </div>
         <div className={`mt-10`}>
           <button
