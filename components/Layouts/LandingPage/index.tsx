@@ -9,7 +9,7 @@ const LandingPage = ({ className }: LandingPageProps) => {
     <div className={`sm:py-11 ${className}  flex w-full text-primary gap-4`}>
       <div className={`flex flex-col w-full md:w-[60%] `}>
         <div
-          className={`font-heavitas font-normal text-2xl md:text-5xl md:leading-10 tracking-wider sm:leading-loose `}
+          className={`font-heavitas font-normal text-2xl md:text-5xl md:leading-[80px] tracking-wider sm:leading-loose `}
         >
           <span className={`text-4xl md:text-6xl text-primaryOrange`}>
             BAGOPLEK
