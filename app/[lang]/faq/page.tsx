@@ -64,12 +64,12 @@ export default function FAQ() {
       <div
         className={`mt-16 w-full py-20 flex flex-col items-center justify-center bg-gradient-to-b from-yellow-400 to to-yellow-200 min-h-screen`}
       >
-        <div className={`font-barlow font-extrabold text-6xl text-primary`}>
+        <div className={`font-barlow font-extrabold text-3xl md:text-6xl text-primary`}>
           Join Partnership
         </div>
 
         <Link
-          className={`bg-white rounded-full text-black mt-14 text-2xl px-7 py-3 hover:md:bg-gray-100 active:bg-gray-100`}
+          className={`bg-white rounded-full text-black mt-7 md:mt-14 md:text-2xl px-4 py-2 md:px-7 md:py-3 hover:md:bg-gray-100 active:bg-gray-100`}
           href={`/partnership`}
         >
           Join Now

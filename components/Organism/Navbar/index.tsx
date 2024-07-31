@@ -90,10 +90,10 @@ const Navbar = () => {
         <div
           className={` flex-col md:flex-row gap-10 font-bold hidden md:flex text-primary`}
         >
-          <Link href="#">Beranda</Link>
+          <Link href="/">Beranda</Link>
           <Link href="#">Produk</Link>
           <Link href="#">Lokasi</Link>
-          <Link href="#">Partnership</Link>
+          <Link href="/partnership">Partnership</Link>
           <Link href="/faq">FAQ</Link>
         </div>
 
@@ -129,10 +129,10 @@ const Navbar = () => {
           </button>
         </div>
         <div className={`flex flex-col mt-4 gap-10 font-bold  text-primary`}>
-          <Link href="#">Beranda</Link>
+          <Link href="/">Beranda</Link>
           <Link href="#">Produk</Link>
           <Link href="#">Lokasi</Link>
-          <Link href="#">Partnership</Link>
+          <Link href="/partnership">Partnership</Link>
           <Link href="/faq">FAQ</Link>
         </div>
       </div>
