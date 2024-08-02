@@ -93,8 +93,22 @@ const Navbar = () => {
           <Link href="/">Beranda</Link>
           <Link href="#">Produk</Link>
           <Link href="#">Lokasi</Link>
-          <Link href="/partnership">Partnership</Link>
-          <Link href="/faq">FAQ</Link>
+          <Link
+            onClick={() => {
+              setShow(false);
+            }}
+            href="/partnership"
+          >
+            Partnership
+          </Link>
+          <Link
+            onClick={() => {
+              setShow(false);
+            }}
+            href="/faq"
+          >
+            FAQ
+          </Link>
         </div>
 
         {/* Empty Column */}
@@ -104,7 +118,7 @@ const Navbar = () => {
         ref={sideBarRef}
         className={`md:hidden w-[90%] fixed left-0 h-screen bg-white top-0 z-50 ${
           show ? "translate-x-0" : "-translate-x-full"
-        } transition-all duration-500 px-4 pt-10`}
+        } transition-all duration-500 px-8 pt-10`}
       >
         <div className={``}>
           <button
@@ -128,12 +142,33 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className={`flex flex-col mt-4 gap-10 font-bold  text-primary`}>
-          <Link href="/">Beranda</Link>
+        <div className={`flex flex-col mt-8  gap-10 font-bold  text-primary`}>
+          <Link
+            onClick={() => {
+              setShow(false);
+            }}
+            href="/"
+          >
+            Beranda
+          </Link>
           <Link href="#">Produk</Link>
           <Link href="#">Lokasi</Link>
-          <Link href="/partnership">Partnership</Link>
-          <Link href="/faq">FAQ</Link>
+          <Link
+            onClick={() => {
+              setShow(false);
+            }}
+            href="/partnership"
+          >
+            Partnership
+          </Link>
+          <Link
+            onClick={() => {
+              setShow(false);
+            }}
+            href="/faq"
+          >
+            FAQ
+          </Link>
         </div>
       </div>
       <div
