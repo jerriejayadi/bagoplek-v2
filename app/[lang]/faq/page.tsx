@@ -19,7 +19,7 @@ export default function FAQ() {
           className={` px-4 flex flex-col items-center justify-start tracking-wider z-30 absolute top-0`}
         >
           <div
-            className={`text-4xl md:text-8xl font-barlow font-black text-primaryOrange mb-4`}
+            className={`text-4xl md:text-8xl font-barlow font-black text-text-themedOrange mb-4`}
           >
             FAQ
           </div>
@@ -64,7 +64,9 @@ export default function FAQ() {
       <div
         className={`mt-16 w-full py-20 flex flex-col items-center justify-center bg-gradient-to-b from-yellow-400 to to-yellow-200 min-h-screen`}
       >
-        <div className={`font-barlow font-extrabold text-3xl md:text-6xl text-primary`}>
+        <div
+          className={`font-barlow font-extrabold text-3xl md:text-6xl text-text-themed`}
+        >
           Join Partnership
         </div>
 

@@ -1,10 +1,129 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import router from "next/navigation";
 export default function Footer() {
   return (
     <footer className={`w-full py-5 px-4 `}>
-      <div
+      <div className={`bg-white flex p-16 text-text-themed `}>
+        <div className={`flex flex-col w-96`}>
+          <Image
+            className={`w-28`}
+            alt={``}
+            src={`/logo-bagoplek.png`}
+            width={4096}
+            height={2920}
+          />
+          <p className={`text-text-themed font-barlow mt-4`}>
+            Lorem ipsum dolor sit amet consectetur. Porttitor at habitant id
+            viverra. Ut laoreet sagittis at aliquet.
+          </p>
+        </div>
+        <div className={`ml-28 `}>
+          <div className={`flex gap-20`}>
+            <div className={`flex flex-col `}>
+              <div className={`font-bold`}>Menu</div>
+              <div className={`mt-6 flex flex-col gap-4`}>
+                <Link href={`#`}>Catalog</Link>
+                <Link href={`#`}>Hot Listing</Link>
+                <Link href={`#`}>About Us</Link>
+                <Link href={`#`}>FAQ</Link>
+              </div>
+            </div>
+            <div className={`flex flex-col `}>
+              <div className={`font-bold`}>GET IN TOUCH</div>
+              <div className={`mt-6 flex flex-col gap-4`}>
+                <div className={`flex items-center gap-3`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className={`text-text-themedOrange size-5`}
+                  >
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z"></path>
+                  </svg>
+                  <p>+62 811 2345 6789</p>
+                </div>
+                <div className={`flex items-center gap-3`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className={`text-text-themed size-5`}
+                  >
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"></path>
+                  </svg>
+                  <p>bagoplek@gmail.com</p>
+                </div>
+                <div className={`flex items-center gap-3`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className={`size-5`}
+                  >
+                    <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+                  </svg>
+                  <p>Jl. Mojo No.11b Malang</p>
+                </div>
+              </div>
+            </div>
+            <div className={`flex flex-col `}>
+              <div className="font-bold">Follow Us</div>
+              <div className={`mt-6 flex flex-col gap-6`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className={`text-blue-500 size-7`}
+                >
+                  <path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path>
+                </svg>
+                <Image
+                  className={`size-6`}
+                  alt=""
+                  src="/icons/instagram-new-2016-seeklogo.com.png"
+                  width={1000}
+                  height={1000}
+                />
+              </div>
+            </div>
+            <div>
+              <h1 className={`font-bold`}>Online Store</h1>
+              <div className={`flex flex-wrap items-center`}>
+                <Image
+                  className={`w-28`}
+                  alt=""
+                  src="/go-food.png"
+                  width={1000}
+                  height={1000}
+                />
+                <Image
+                  className={`w-36 shrink-0  h-7 ml-4`}
+                  alt=""
+                  src="/grab-food.png"
+                  width={1000}
+                  height={1000}
+                />
+                <Image
+                  className={`w-36 `}
+                  alt=""
+                  src="/shopee.png"
+                  width={1000}
+                  height={1000}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <div
         className={`grid grid-cols-2 sm:flex sm:flex-row flex-col md:items-center justify-around`}
       >
         <div>
@@ -42,7 +161,7 @@ export default function Footer() {
         <div className={`text-black font-sans font-normal text-center`}>
           &copy; 2024 Bagoplek
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }

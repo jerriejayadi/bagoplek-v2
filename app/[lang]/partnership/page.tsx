@@ -69,7 +69,7 @@ export default function Partnership() {
           className={`  flex flex-col items-center justify-start tracking-wider z-30 absolute top-0`}
         >
           <div
-            className={`text-4xl md:text-5xl font-barlow font-black text-primaryOrange mb-4`}
+            className={`text-4xl md:text-5xl font-barlow font-black text-text-themedOrange mb-4`}
           >
             JOIN OUR
           </div>
@@ -89,12 +89,13 @@ export default function Partnership() {
         <div className={`flex flex-col-reverse  md:flex-row gap-5`}>
           <div className={`flex flex-col gap-5 md:gap-16 md:w-[50%]`}>
             <div
-              className={`font-barlow font-extrabold text-primaryOrange text-3xl md:text-5xl`}
+              className={`font-barlow font-extrabold text-text-themedOrange text-3xl md:text-5xl`}
             >
-              Join as our <span className={`text-primary`}>PARTNER</span> now!
+              Join as our <span className={`text-text-themed`}>PARTNER</span>{" "}
+              now!
             </div>
             <div
-              className={`flex flex-col gap-5 md:gap-8 font-barlow font-medium md:text-3xl text-primary`}
+              className={`flex flex-col gap-5 md:gap-8 font-barlow font-medium md:text-3xl text-text-themed`}
             >
               <div>
                 Dengan perolehan keuntungan hingga belasan juta tiap bulan,
@@ -111,36 +112,36 @@ export default function Partnership() {
             <div className={`flex items-center justify-between`}>
               <div>
                 <div
-                  className={`text-primaryOrange font-heavitas text-3xl md:text-5xl`}
+                  className={`text-text-themedOrange font-heavitas text-3xl md:text-5xl`}
                 >
                   5+
                 </div>
                 <div
-                  className={`text-primary font-barlow font-light md:text-2xl`}
+                  className={`text-text-themed font-barlow font-light md:text-2xl`}
                 >
                   Years Exp
                 </div>
               </div>
               <div>
                 <div
-                  className={`text-primaryOrange font-heavitas text-3xl md:text-5xl`}
+                  className={`text-text-themedOrange font-heavitas text-3xl md:text-5xl`}
                 >
                   20+
                 </div>
                 <div
-                  className={`text-primary font-barlow font-light md:text-2xl`}
+                  className={`text-text-themed font-barlow font-light md:text-2xl`}
                 >
                   Reseller
                 </div>
               </div>
               <div>
                 <div
-                  className={`text-primaryOrange font-heavitas text-3xl md:text-5xl`}
+                  className={`text-text-themedOrange font-heavitas text-3xl md:text-5xl`}
                 >
                   120+
                 </div>
                 <div
-                  className={`text-primary font-barlow font-light md:text-2xl`}
+                  className={`text-text-themed font-barlow font-light md:text-2xl`}
                 >
                   Partner
                 </div>
@@ -164,13 +165,13 @@ export default function Partnership() {
       >
         <div className={`md:w-[946px] text-center`}>
           <div
-            className={`font-barlow font-extrabold text-primaryOrange  text-3xl md:text-5xl tracking-wide mb-5 md:mb-16`}
+            className={`font-barlow font-extrabold text-text-themedOrange  text-3xl md:text-5xl tracking-wide mb-5 md:mb-16`}
           >
-            Keuntungan menjadi <span className={`text-primary`}>PARTNER</span>{" "}
-            Bagoplek
+            Keuntungan menjadi{" "}
+            <span className={`text-text-themed`}>PARTNER</span> Bagoplek
           </div>
           <div
-            className={`font-barlow font-medium text-primary md:text-[30px]`}
+            className={`font-barlow font-medium text-text-themed md:text-[30px]`}
           >
             Bergabunglah menjadi keluarga besar Bagoplek! Anda berkesempatan
             menjadi bagian dalam pertumbuhan industri F&B dengan keuntungan
@@ -193,7 +194,7 @@ export default function Partnership() {
               />
             </div>
             <div
-              className={`text-primary text-center font-barlow  font-medium md:text-2xl`}
+              className={`text-text-themed text-center font-barlow  font-medium md:text-2xl`}
             >
               Pengiriman <br />
               Tiap Minggu
@@ -212,7 +213,7 @@ export default function Partnership() {
               />
             </div>
             <div
-              className={`text-primary text-center font-barlow  font-medium md:text-2xl`}
+              className={`text-text-themed text-center font-barlow  font-medium md:text-2xl`}
             >
               Kontrak <br />
               Mudah
@@ -231,7 +232,7 @@ export default function Partnership() {
               />
             </div>
             <div
-              className={`text-primary text-center font-barlow  font-medium md:text-2xl`}
+              className={`text-text-themed text-center font-barlow  font-medium md:text-2xl`}
             >
               Persiapan <br />2 Minggu
             </div>
@@ -249,7 +250,7 @@ export default function Partnership() {
               />
             </div>
             <div
-              className={`text-primary text-center font-barlow  font-medium md:text-2xl`}
+              className={`text-text-themed text-center font-barlow  font-medium md:text-2xl`}
             >
               Lokasi Sesuai <br />
               Partner
@@ -268,7 +269,7 @@ export default function Partnership() {
               />
             </div>
             <div
-              className={`text-primary text-center font-barlow  font-medium md:text-2xl`}
+              className={`text-text-themed text-center font-barlow  font-medium md:text-2xl`}
             >
               Keuntungan <br />
               Menjanjikan
@@ -280,7 +281,7 @@ export default function Partnership() {
         <div
           className={`bg-[#FBD449]  rounded-[20px] px-10 md:px-20 pt-12 md:pt-24 pb-8 flex flex-col gap-8 md:gap-0 md:flex-row items-start justify-between`}
         >
-          <div className={`font-barlow text-primary`}>
+          <div className={`font-barlow text-text-themed`}>
             <div className={`font-extrabold text-4xl mb-4`}>Hubungi Kami</div>
             <div className={`font-medium text-2xl`}>
               Segera hubungi kami, kami siap membantu!
@@ -316,7 +317,7 @@ export default function Partnership() {
             </div>
           </div>
           <form
-            className={` text-primary w-full md:w-[50%]`}
+            className={` text-text-themed w-full md:w-[50%]`}
             onSubmit={sendEmail}
           >
             <div className={`flex flex-col gap-2`}>

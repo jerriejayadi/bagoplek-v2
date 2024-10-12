@@ -88,7 +88,7 @@ const Navbar = () => {
 
         {/* Menu */}
         <div
-          className={` flex-col md:flex-row gap-10 font-bold hidden md:flex text-primary`}
+          className={` flex-col md:flex-row gap-10 font-bold hidden md:flex text-text-themed`}
         >
           <Link href="/">Beranda</Link>
           <Link href="#">Produk</Link>
@@ -142,7 +142,9 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className={`flex flex-col mt-8  gap-10 font-bold  text-primary`}>
+        <div
+          className={`flex flex-col mt-8  gap-10 font-bold  text-text-themed`}
+        >
           <Link
             onClick={() => {
               setShow(false);
@@ -185,7 +187,7 @@ const Navbar = () => {
           xmlns="http://www.w3.org/2000/svg"
           className={`size-14 md:size-20 text-black`}
         >
-          <g clip-path="url(#clip0_2986_1852)">
+          <g clipPath="url(#clip0_2986_1852)">
             <path
               d="M17.9344 58.1884L19.0141 58.7284C23.5132 61.4276 28.5518 62.6873 33.5906 62.6873C49.4267 62.6873 62.3834 49.7306 62.3834 33.8946C62.3834 26.3365 59.324 18.9584 53.9255 13.5596C48.5268 8.16092 41.3284 5.10181 33.5906 5.10181C17.7546 5.10181 4.79762 18.0585 4.97768 34.0746C4.97768 39.4731 6.59728 44.692 9.29651 49.1906L10.0163 50.2705L7.13722 60.8879L17.9344 58.1884Z"
               fill="#00E676"

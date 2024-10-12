@@ -30,7 +30,7 @@ export default function Accordion({
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          className="size-6 md:size-8 text-primary font-bold shrink-0"
+          className="size-6 md:size-8 text-text-themed font-bold shrink-0"
         >
           <path
             strokeLinecap="round"
@@ -38,13 +38,17 @@ export default function Accordion({
             d="M12 4.5v15m7.5-7.5h-15"
           />
         </svg>
-        <div className={`font-jakartaSans font-bold md:text-xl text-primary`}>
+        <div
+          className={`font-jakartaSans font-bold md:text-xl text-text-themed`}
+        >
           {title}
         </div>
       </div>
       {/* body */}
       {open && (
-        <div className={`font-jakartaSans text-primary ml-10 md:ml-14`}>{children}</div>
+        <div className={`font-jakartaSans text-text-themed ml-10 md:ml-14`}>
+          {children}
+        </div>
       )}
     </div>
   );
