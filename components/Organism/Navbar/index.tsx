@@ -89,14 +89,14 @@ const Navbar = () => {
           <Link href="/">Beranda</Link>
           <Link href="/products">Produk</Link>
           <Link href="#">Lokasi</Link>
-          <Link
+          {/* <Link
             onClick={() => {
               setShow(false);
             }}
             href="/partnership"
           >
             Partnership
-          </Link>
+          </Link> */}
           <Link
             onClick={() => {
               setShow(false);
@@ -151,14 +151,14 @@ const Navbar = () => {
           </Link>
           <Link href="/products">Produk</Link>
           <Link href="#">Lokasi</Link>
-          <Link
+          {/* <Link
             onClick={() => {
               setShow(false);
             }}
             href="/partnership"
           >
             Partnership
-          </Link>
+          </Link> */}
           <Link
             onClick={() => {
               setShow(false);
