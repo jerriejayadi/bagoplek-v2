@@ -4,9 +4,73 @@ import Link from "next/link";
 import router from "next/navigation";
 export default function Footer() {
   return (
-    <footer className={`w-full py-5 px-4 `}>
+    <footer className={`w-full`}>
+      <div className={`w-screen relative`}>
+        <Image
+          className={`w-full h-[800px] shrink-0 object-cover md:object-fill `}
+          alt=""
+          src="/footer/Bagoplek.png"
+          width={1920}
+          height={1080}
+        />
+        <div
+          className={`flex w-full flex-col items-start justify-between absolute top-0 px-6 py-10 md:px-40 md:py-44  md:flex-row`}
+        >
+          <div>
+            <p className={`text-2xl font-heavitas text-text-themed leading-8`}>
+              Want to join <br />
+              <span className={`text-3xl md:text-5xl leading-10`}>
+                partnership?
+              </span>
+            </p>
+            <p className={`my-4 text-text-themed`}>
+              Click here for further information
+            </p>
+            <div
+              onClick={() => {
+                console.log("hello");
+              }}
+              className={`bg-primaryOrange text-white w-full  hover:cursor-pointer flex items-center gap-2 justify-between transition-all duration-150 rounded-[20px] `}
+            >
+              <div
+                className={`flex text-center w-full justify-center items-center md:text-xl gap-5 `}
+              >
+                Infor Partnership
+              </div>
+
+              <div
+                className={`h-full bg-white p-3 text-primary rounded-r-[20px]`}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  className={` text-[#FFDA48] size-6 md:size-10`}
+                >
+                  <path
+                    fill="currentColor"
+                    className={`text-[#FFDA48]`}
+                    d="M9.31 6.71a.996.996 0 0 0 0 1.41L13.19 12l-3.88 3.88a.996.996 0 1 0 1.41 1.41l4.59-4.59a.996.996 0 0 0 0-1.41L10.72 6.7c-.38-.38-1.02-.38-1.41.01"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <Image
+              className={`w-[500px]`}
+              alt=""
+              src="/footer/Bakso.png"
+              width={1000}
+              height={1000}
+            />
+          </div>
+        </div>
+      </div>
       <div
-        className={`bg-white flex flex-col gap-6 p-8 md:p-16 text-text-themed md:flex-row `}
+        className={`bg-white flex flex-col gap-6 p-8 md:p-16 text-text-themed md:flex-row -mt-2`}
       >
         <div className={`flex flex-col md:w-96`}>
           <Image

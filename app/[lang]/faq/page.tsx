@@ -1,10 +1,11 @@
 import Accordion from "@/components/Atoms/accordion";
+import Newsletter from "@/components/Layouts/NewsLetter/page";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function FAQ() {
   return (
-    <main className={`flex flex-col relative items-center`}>
+    <main className={`flex flex-col relative items-center w-full`}>
       <div
         className={` flex flex-col  items-center justify-center h-[780px] -mt-64 `}
       >
@@ -29,7 +30,7 @@ export default function FAQ() {
         </div>
       </div>
       <div
-        className={`max-w-[1080px] px-4 flex flex-col items-center justify-center gap-6 mt-16`}
+        className={`max-w-[1080px] px-4 flex flex-col items-center justify-center gap-6 mt-16 mb-40`}
       >
         <Accordion title={"Apakah Bagoplek Halal?"}>
           Ya, Bagoplek Halal dengan menggunakan bahan dasar daging Ayam
@@ -59,7 +60,7 @@ export default function FAQ() {
           Ya, Bagoplek Halal dengan menggunakan bahan dasar daging Ayam
         </Accordion>
       </div>
-      <div
+      {/* <div
         className={`mt-16 w-full py-20 flex flex-col items-center justify-center bg-gradient-to-b from-yellow-400 to to-yellow-200 min-h-screen`}
       >
         <div
@@ -74,7 +75,8 @@ export default function FAQ() {
         >
           Join Now
         </Link>
-      </div>
+      </div> */}
+      <Newsletter />
     </main>
   );
 }
