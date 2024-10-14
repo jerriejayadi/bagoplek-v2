@@ -5,8 +5,10 @@ import router from "next/navigation";
 export default function Footer() {
   return (
     <footer className={`w-full py-5 px-4 `}>
-      <div className={`bg-white flex p-16 text-text-themed `}>
-        <div className={`flex flex-col w-96`}>
+      <div
+        className={`bg-white flex flex-col gap-6 p-8 md:p-16 text-text-themed md:flex-row `}
+      >
+        <div className={`flex flex-col md:w-96`}>
           <Image
             className={`w-28`}
             alt={``}
@@ -19,8 +21,8 @@ export default function Footer() {
             viverra. Ut laoreet sagittis at aliquet.
           </p>
         </div>
-        <div className={`ml-28 `}>
-          <div className={`flex gap-20`}>
+        <div className={`md:ml-28 `}>
+          <div className={`flex flex-col gap-20 md:flex-row`}>
             <div className={`flex flex-col `}>
               <div className={`font-bold`}>Menu</div>
               <div className={`mt-6 flex flex-col gap-4`}>

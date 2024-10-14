@@ -56,14 +56,10 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`flex items-center justify-center md:justify-between fixed  top-0 px-7 md:px-14 py-5 bg-transparent w-full max-w-[1920px] z-50 transition-all duration-300 ${
+        className={`flex items-center justify-center md:justify-between fixed  top-0 px-7 md:px-14 py-5  w-full max-w-[1920px] z-50 transition-all duration-300 ${
           // show ? "translate-y-0" : "-translate-y-full"
           ""
-        } ${
-          navbarBackground
-            ? "bg-[#FBD440] bg-opacity-80 backdrop-blur-sm "
-            : "bg-transparent"
-        } z-50`}
+        } ${navbarBackground ? "bg-[#FEFCF1]" : "bg-transparent"} z-50`}
       >
         {/* Hamburger Toggle */}
         <button
@@ -91,7 +87,7 @@ const Navbar = () => {
           className={` flex-col md:flex-row gap-10 font-bold hidden md:flex text-text-themed`}
         >
           <Link href="/">Beranda</Link>
-          <Link href="#">Produk</Link>
+          <Link href="/products">Produk</Link>
           <Link href="#">Lokasi</Link>
           <Link
             onClick={() => {
@@ -153,7 +149,7 @@ const Navbar = () => {
           >
             Beranda
           </Link>
-          <Link href="#">Produk</Link>
+          <Link href="/products">Produk</Link>
           <Link href="#">Lokasi</Link>
           <Link
             onClick={() => {

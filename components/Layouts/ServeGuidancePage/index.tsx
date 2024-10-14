@@ -38,21 +38,21 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
         width={`500`}
         height={"100"}
       /> */}
-      <div className={`py-11 ${className}  flex w-full`}>
+      <div className={`py-11 ${className} flex w-full`}>
         <div
           className={`flex flex-col w-full  gap-10 md:gap-20 items-center justify-center md:items-start`}
         >
           <div className={`flex w-full `}>
             <div className={`flex flex-col w-full md:w-[60%] gap-7 md:gap-14`}>
               <div
-                className={`text-left font-extrabold text-2xl  md:text-5xl leading-normal tracking-wider sm:leading-loose text-primary`}
+                className={`text-left font-heavitas text-2xl  md:text-4xl leading-normal tracking-wider sm:leading-loose text-text-themed`}
               >
-                SERVE AND STORED{" "}
-                <span className={`text-3xl md:text-7xl text-primaryOrange`}>
+                SERVE &amp; STORED{" "}
+                <span className={`text-3xl md:text-5xl text-primaryOrange`}>
                   GUIDANCE
                 </span>
               </div>
-              <div className={`text-primary text-lg md:text-2xl `}>
+              <div className={`text-text-themed text-lg md:text-lg `}>
                 Lorem ipsum dolor sit amet consectetur. Porttitor at habitant id
                 viverra. Ut laoreet sagittis at aliquet velit pretium non sed.
               </div>
@@ -64,9 +64,7 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
                   title={
                     <>
                       MENGGUNAKAN{" "}
-                      <span className={`text-primaryOrange font-bold`}>
-                        OVEN
-                      </span>
+                      <span className={`text-primaryOrange`}>OVEN</span>
                     </>
                   }
                   desc={
@@ -77,13 +75,11 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
                   }
                 />
                 <ServeGuidanceStep
-                  imageURL={"/serve-guidance/oven.png"}
+                  imageURL={"/serve-guidance/frying-pan (1).png"}
                   title={
                     <>
                       DENGAN CARA{" "}
-                      <span className={`text-primaryOrange font-bold`}>
-                        DIGORENG
-                      </span>
+                      <span className={`text-primaryOrange`}>DIGORENG</span>
                     </>
                   }
                   desc={
@@ -94,13 +90,11 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
                   }
                 />
                 <ServeGuidanceStep
-                  imageURL={"/serve-guidance/oven.png"}
+                  imageURL={"/serve-guidance/air-fryer.png"}
                   title={
                     <>
                       MENGGUNAKAN{" "}
-                      <span className={`text-primaryOrange font-bold`}>
-                        AIRFRYER
-                      </span>
+                      <span className={`text-primaryOrange `}>AIRFRYER</span>
                     </>
                   }
                   desc={
@@ -111,13 +105,11 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
                   }
                 />
                 <ServeGuidanceStep
-                  imageURL={"/serve-guidance/oven.png"}
+                  imageURL={"/serve-guidance/refrigerator.png"}
                   title={
                     <>
                       CARA{" "}
-                      <span className={`text-primaryOrange font-bold`}>
-                        PENYIMPANAN
-                      </span>{" "}
+                      <span className={`text-primaryOrange`}>PENYIMPANAN</span>{" "}
                     </>
                   }
                   desc={

@@ -4,9 +4,16 @@ interface ProductPageProps {
   className?: string;
 }
 
-const ProductPage = ({ className }: ProductPageProps) => {
+const Products = ({ className }: ProductPageProps) => {
   return (
     <div className={`relative w-full shrink-0`}>
+      <Image
+        alt=""
+        src={`/images/product/thumbnail.jpeg`}
+        className={``}
+        width={1920}
+        height={1080}
+      />
       <div className={`flex items-end justify-center`}>
         <Image
           alt=""
@@ -23,87 +30,103 @@ const ProductPage = ({ className }: ProductPageProps) => {
           height={"100"}
         />
       </div>
-      {/* <Image
-        alt=""
-        src={`/vector-3.png`}
-        className={`absolute -top-20 left-0 w-[50%]   h-full `}
-        width={`500`}
-        height={"100"}
-      />
-      <Image
-        alt=""
-        src={`/Vector-1.png`}
-        className={`absolute -top-20 right-0 w-[50%] h-full `}
-        width={`500`}
-        height={"100"}
-      /> */}
-      <div className={`py-11 ${className}  flex w-full`}>
+      <div className={`p-6 md:py-11 md:px-16 ${className}  flex w-full`}>
         <div
           className={`flex flex-col w-full  gap-10 md:gap-20 items-center justify-center`}
         >
           <div
-            className={`text-center font-extrabold text-2xl  md:text-5xl leading-normal tracking-wider sm:leading-loose text-primary`}
+            className={`font-heavitas text-center  text-2xl  md:text-[40px] leading-normal tracking-wider sm:leading-loose text-text-themed`}
           >
             EAT{" "}
-            <span className={`text-3xl md:text-7xl text-primaryOrange`}>
+            <span className={`text-3xl md:text-[52px] text-primaryOrange`}>
               NOW
             </span>{" "}
             OR{" "}
-            <span className={`text-3xl md:text-7xl text-primaryOrange`}>
+            <span className={`text-3xl md:text-[52px] text-primaryOrange`}>
               LATER
             </span>
             !
           </div>
           <div
-            className={`flex items-center justify-center gap-16 md:gap-32 flex-col sm:flex-row`}
+            className={`flex items-center justify-center gap-10 flex-col sm:flex-row `}
           >
-            <div className={`flex flex-col items-center justify-center`}>
-              <div>
+            <div
+              className={`flex flex-col items-center  bg-white shadow-xl h-full rounded-[20px]`}
+            >
+              <div className={`flex aspect-square overflow-hidden `}>
                 <Image
                   alt=""
+                  className={`size-[400px] rounded-t-lg object-cover`}
                   src={`/product/foto2.png`}
-                  width={500}
-                  height={500}
+                  width={400}
+                  height={400}
                 />
               </div>
-              <div className={`text-primary mt-8 text-center font-semibold`}>
-                <div className={`text-2xl md:text-4xl `}>
+              <div
+                className={`text-text-themed p-4 md:p-7 text-center font-semibold flex flex-col items-center`}
+              >
+                <div className={`text-2xl p-4`}>
                   BAGOPLEK <span className={`font-black`}>PACKAGE</span>
                 </div>
-                <div className={`text-lg md:text-2xl mt-6`}>
+                <div className={`text-base mt-6`}>
                   &bull; Isi 10 Pcs + 1 Sambal
                 </div>
-                <div className={`text-lg md:text-2xl`}>
+                <div className={`text-base`}>&bull; Isi 5 Pcs + 1 Sambal</div>
+              </div>
+            </div>
+            <div
+              className={`flex flex-col items-center bg-white shadow-xl h-full rounded-[20px]`}
+            >
+              <div className={`flex aspect-square overflow-hidden `}>
+                <Image
+                  alt=""
+                  className={`size-[400px] rounded-t-lg object-cover`}
+                  src={`/product/foto.png`}
+                  width={400}
+                  height={400}
+                />
+              </div>
+              <div
+                className={`text-text-themed text-center font-semibold py-7 flex flex-col items-center`}
+              >
+                <div className={`text-2xl p-4`}>
+                  BAGOPLEK <span className={`font-black`}>FROZEN</span>
+                </div>
+                <div className={`text-base mt-5`}>
                   &bull; Isi 10 Pcs + 1 Sambal
                 </div>
               </div>
             </div>
-            <div className={`flex flex-col items-center justify-center`}>
-              <div>
+            <div
+              className={`flex flex-col items-center bg-white shadow-xl h-full rounded-[20px]`}
+            >
+              <div
+                className={`flex aspect-square overflow-hidden object-cover `}
+              >
                 <Image
+                  className={`size-[400px] rounded-[20px] `}
                   alt=""
-                  src={`/product/foto.png`}
-                  width={500}
-                  height={500}
+                  src={`/sambal.jpeg`}
+                  width={400}
+                  height={400}
                 />
               </div>
-              <div className={`text-primary mt-8 text-center font-semibold`}>
-                <div className={`text-2xl md:text-4xl  `}>
-                  BAGOPLEK <span className={`font-black`}>FROZEN</span>
+              <div
+                className={`text-text-themed text-center font-semibold my-auto p-4`}
+              >
+                <div className={`text-2xl  `}>
+                  SAMBAL <span className={`font-black`}>SERBAGUNA</span>
                 </div>
-                <div className={`text-lg md:text-2xl mt-6`}>
-                  &bull; Isi 10 Pcs + 1 Sambal
-                </div>
-                <div className={`text-lg md:text-2xl`}>
-                  &bull; Isi 10 Pcs + 1 Sambal
+                <div className={`text-base mt-5`}>
+                  &bull; 1 botol berisi 300ml
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 };
 
-export default ProductPage;
+export default Products;

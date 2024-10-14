@@ -19,13 +19,11 @@ export default function FAQ() {
           className={` px-4 flex flex-col items-center justify-start tracking-wider z-30 absolute top-0`}
         >
           <div
-            className={`text-4xl md:text-8xl font-barlow font-black text-text-themedOrange mb-4`}
+            className={`font-heavitas text-4xl md:text-8xl  font-black text-text-themed mb-4`}
           >
             FAQ
           </div>
-          <div
-            className={`text-4xl md:text-4xl font-barlow font-black text-[#715B3C] text-center `}
-          >
+          <div className={`text-4xl font-barlow  text-[#715B3C] text-center `}>
             Frequently Asked Question
           </div>
         </div>

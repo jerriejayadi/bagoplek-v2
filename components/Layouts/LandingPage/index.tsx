@@ -6,16 +6,18 @@ interface LandingPageProps {
 
 const LandingPage = ({ className }: LandingPageProps) => {
   return (
-    <div className={`sm:py-11 ${className}  flex w-full text-primary gap-4`}>
-      <div className={`flex flex-col w-full md:w-[60%] `}>
+    <div
+      className={`sm:py-11 ${className}  flex w-full text-text-themed gap-4`}
+    >
+      {/* <div className={`flex flex-col w-full md:w-[60%] `}>
         <div
           className={`font-heavitas font-normal text-2xl md:text-5xl md:leading-[80px] tracking-wider sm:leading-loose `}
         >
-          <span className={`text-4xl md:text-6xl text-primaryOrange`}>
+          <span className={`text-4xl md:text-6xl text-text-themedOrange`}>
             BAGOPLEK
           </span>
           {` `}ARE MADE TO BRING{` `}
-          <span className={`text-4xl md:text-5xl text-primaryOrange`}>
+          <span className={`text-4xl md:text-5xl text-text-themedOrange`}>
             HAPPINESS
           </span>
         </div>
@@ -55,9 +57,9 @@ const LandingPage = ({ className }: LandingPageProps) => {
             height={40}
           />
         </div>
-      </div>
+      </div> */}
 
-      <div
+      {/* <div
         className={`md:w-[40%] h-[780px] bg-gradient-to-br from-[#FCD848] to-[#FCD848] relative -mt-40 rounded-bl-[120px] z-30 md:block hidden min-w-96`}
       >
         <Image
@@ -86,7 +88,7 @@ const LandingPage = ({ className }: LandingPageProps) => {
         >
           BAGOPLEK
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
