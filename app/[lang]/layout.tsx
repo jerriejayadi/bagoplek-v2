@@ -39,8 +39,10 @@ export default function RootLayout({
         className={`${inter.className} ${heavitas.variable} ${barlow.variable}   max-w-[1920px] mx-auto bg-[#FFFDF3]`}
       >
         <Navbar />
-        <main className={` py-28  `}>{children}</main>
-        <Footer />
+        <main className={` py-28  `}>
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );
