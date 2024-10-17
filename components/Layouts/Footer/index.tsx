@@ -5,41 +5,43 @@ import router from "next/navigation";
 export default function Footer() {
   return (
     <footer className={`w-full`}>
-      <div className={`w-screen relative`}>
+      <div className={`w-full relative`}>
         <Image
-          className={`w-full h-[800px] shrink-0 object-cover md:object-fill `}
+          className={`w-full h-[600px] md:h-[800px] shrink-0 object-cover md:object-fill `}
           alt=""
           src="/footer/Bagoplek.png"
           width={1920}
           height={1080}
         />
         <div
-          className={`flex w-full flex-col items-start justify-between absolute top-0 px-6 py-10 md:px-40 md:py-44  md:flex-row`}
+          className={`flex w-full flex-col items-start justify-between absolute top-0 px-10 py-16 md:px-40 md:py-44  md:flex-row`}
         >
-          <div>
-            <p className={`text-2xl font-heavitas text-text-themed leading-8`}>
+          <div className="w-full">
+            <p
+              className={`text-base md:text-2xl font-heavitas text-text-themed leading-4 md:leading-8`}
+            >
               Want to join <br />
-              <span className={`text-3xl md:text-5xl leading-10`}>
+              <span className={`text-xl md:text-5xl leading-6 md:leading-10`}>
                 partnership?
               </span>
             </p>
-            <p className={`my-4 text-text-themed`}>
+            <p className={`mt-4 text-[10px] text-text-themed font-lato font-bold`}>
               Click here for further information
             </p>
             <div
               onClick={() => {
                 console.log("hello");
               }}
-              className={`bg-primaryOrange text-white w-full  hover:cursor-pointer flex items-center gap-2 justify-between transition-all duration-150 rounded-[20px] `}
+              className={`mt-4 bg-primaryOrange text-white w-full md:max-w-[450px]  hover:cursor-pointer flex items-center gap-2 justify-between transition-all duration-150 rounded-[10px] md:rounded-[20px] `}
             >
               <div
-                className={`flex text-center w-full justify-center items-center md:text-xl gap-5 `}
+                className={`flex text-center w-full justify-center items-center text-sm md:text-xl gap-5 `}
               >
                 Infor Partnership
               </div>
 
               <div
-                className={`h-full bg-white p-3 text-primary rounded-r-[20px]`}
+                className={`h-full bg-white p-3 text-primary rounded-r-[10px] md:rounded-r-[20px]`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -58,9 +60,11 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div
+            className={`mt-20 md:mt-0 w-full flex items-center justify-center`}
+          >
             <Image
-              className={`w-[500px]`}
+              className={`w-[200px] md:w-[500px]`}
               alt=""
               src="/footer/Bakso.png"
               width={1000}
@@ -86,7 +90,7 @@ export default function Footer() {
           </p>
         </div>
         <div className={`md:ml-28 `}>
-          <div className={`flex flex-col gap-20 md:flex-row`}>
+          <div className={`flex flex-col gap-8 md:gap-20 md:flex-row`}>
             <div className={`flex flex-col `}>
               <div className={`font-bold`}>Menu</div>
               <div className={`mt-6 flex flex-col gap-4`}>
@@ -140,7 +144,9 @@ export default function Footer() {
             </div>
             <div className={`flex flex-col `}>
               <div className="font-bold">Follow Us</div>
-              <div className={`mt-6 flex flex-col gap-6`}>
+              <div
+                className={`mt-6 flex flex-row md:flex-col items-center md:items-start gap-6`}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

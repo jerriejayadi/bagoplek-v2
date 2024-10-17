@@ -15,32 +15,38 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col justify-between ">
       <Image
-        className={`-mt-28`}
+        className={`md:-mt-28`}
         alt={``}
         src={`/images/landing-page.jpeg`}
         width={2000}
         height={2000}
       />
       <div className={`bg-[#FFFDF3]`}>
-        <div className={`mt-20 flex flex-col items-center justify-center`}>
-          <h1 className={`font-heavitas text-text-themed text-5xl`}>
+        <div
+          className={`mt-6 md:mt-20 flex flex-col items-center justify-center`}
+        >
+          <h1
+            className={`font-heavitas text-text-themed text-base md:text-5xl`}
+          >
             FIND OUR{" "}
-            <span className={`text-primaryOrange text-[52px] leading-[64px]`}>
+            <span
+              className={`text-primaryOrange text-xl md:text-[52px] md:leading-[64px]`}
+            >
               OUTLETS
             </span>
           </h1>
           <p
-            className={`text-text-themed mt-2 text-xl tracking-[5%] font-medium`}
+            className={`font-lato text-text-themed mt-2 text-[10px] md:text-xl tracking-[5%] font-medium`}
           >
             We are Spreading Around East Java
           </p>
         </div>
-        <div className={`relative w-full h-screen  `}>
+        <div className={`relative w-full h-[284px] md:h-screen  `}>
           <div
-            className={`w-full absolute top-0 bg-gradient-to-l from-black/50 to-black/0 to-50% h-full overflow-hidden`}
+            className={`w-full absolute top-0 bg-gradient-to-l from-black/50 to-black/0 to-100% md:to-50% h-full overflow-hidden`}
           />
           <iframe
-            className={`w-full mt-24 h-screen `}
+            className={`w-full mt-7 md:mt-24 h-[284px] md:h-screen `}
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.2128044666783!2d112.6143422!3d-7.9769442999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883539578065f%3A0x3254e7f3f1e4831e!2sBagoplek%20-%20Office%20(Central%20Kitchen)!5e0!3m2!1sen!2sid!4v1728703675911!5m2!1sen!2sid&zoom=20"
             width="600"
             allowFullScreen
@@ -49,42 +55,60 @@ export default function Home() {
           />
 
           <div
-            className={`absolute top-0 w-full flex flex-col items-end justify-start pt-28 pr-40 overflow-hidden `}
+            className={`absolute top-0 w-full flex flex-col items-end justify-start p-4 md:pt-28 md:pr-40 overflow-hidden h-full `}
           >
-            <div className={`h-full flex flex-col overflow-hidden`}>
-              <p className={`text-white font-heavitas  z-50 text-2xl`}>
-                Our <br /> <span className={`text-4xl`}>Location</span>
+            <div className={` flex flex-col overflow-hidden `}>
+              <p
+                className={`text-white font-heavitas  z-40 text-xs md:text-2xl`}
+              >
+                Our <br />{" "}
+                <span className={`text-base md:text-4xl`}>Location</span>
               </p>
               <Carousel
                 opts={{
-                  align: "start",
+                  align: "center",
                 }}
                 orientation="vertical"
-                className="w-full max-w-xs "
+                className="w-[150px] md:w-full max-w-xs   "
               >
-                <CarouselContent className="-mt-1 h-[500px] ">
+                <CarouselContent className="-mt-1 md:h-[500px] h-[284px] ">
                   {Array.from({ length: 5 }).map((_, index) => (
-                    <CarouselItem key={index} className="pt-1 md:basis-1/2">
+                    <CarouselItem
+                      key={index}
+                      className="pt-1 basis-1 md:basis-1/2"
+                    >
                       <div className="p-1">
                         <div
-                          className={`flex flex-col bg-[#F5DD7D] rounded-3xl `}
+                          className={`flex flex-col bg-[#F5DD7D] rounded-sm md:rounded-3xl `}
                         >
                           <Image
-                            className={`h-40 object-cover rounded-t-3xl`}
+                            className={`h-20 md:h-40 object-cover rounded-sm md:rounded-t-3xl`}
                             alt={``}
                             src={`/images/partnership/partnership-1.jpeg`}
                             width={1000}
                             height={220}
                           />
-                          <div className={`p-6 text-center text-text-themed`}>
-                            <h1 className={`text-2xl font-heavitas`}>
+                          <div
+                            className={`p-2 md:p-6 text-center text-text-themed`}
+                          >
+                            <h1
+                              className={`text-[9px] md:text-2xl font-heavitas`}
+                            >
                               Outlet{" "}
                               <span className={`text-primaryOrange`}>
                                 Citraland Surabaya
                               </span>
                             </h1>
-                            <p>Jl. Taman Puspa Raya, Surabaya</p>
-                            <p>031 - 374918</p>
+                            <p
+                              className={`text-[6px] md:text-base font-barlow font-medium`}
+                            >
+                              Jl. Taman Puspa Raya, Surabaya
+                            </p>
+                            <p
+                              className={`text-[6px] md:text-base font-barlow font-medium`}
+                            >
+                              031 - 374918
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -97,34 +121,38 @@ export default function Home() {
         </div>
       </div>
       <div className={``}>
-        <h1 className={`m-14 text-[40px] text-text-themed font-heavitas`}>
+        <h1
+          className={`m-7 text-base md:m-14 md:text-[40px] text-text-themed font-heavitas`}
+        >
           SAVOR THE FLAVOUR <br />
-          <span className={`text-primaryOrange text-[52px]`}>
+          <span className={`text-primaryOrange text-xl md:text-[52px]`}>
             EVERYDAY
           </span>{" "}
           WITH{" "}
-          <span className={`text-primaryOrange text-[52px]`}>BAGOPLEK</span>
+          <span className={`text-primaryOrange text-xl md:text-[52px]`}>
+            BAGOPLEK
+          </span>
         </h1>
-        <div className="overflow-hidden whitespace-nowrap">
-          <div className="flex animate-marquee">
+        <div className="overflow-hidden whitespace-nowrap ">
+          <div className="flex animate-marquee min-h-[200px]">
             <Image
               src="/images/slide-image/image-1.jpeg"
               alt="Image 1"
-              className="w-1/3 aspect-square object-cover  "
+              className="md:w-1/3 aspect-square object-cover  "
               width={1000}
               height={1000}
             />
             <Image
               src="/images/slide-image/image-2.jpeg"
               alt="Image 1"
-              className="w-1/3 aspect-square object-cover  "
+              className="md:w-1/3 aspect-square object-cover  "
               width={1000}
               height={1000}
             />
             <Image
               src="/images/slide-image/image-3.jpeg"
               alt="Image 1"
-              className="w-1/3 aspect-square object-cover  "
+              className="md:w-1/3 aspect-square object-cover  "
               width={1000}
               height={1000}
             />
@@ -133,21 +161,21 @@ export default function Home() {
             <Image
               src="/images/slide-image/image-1.jpeg"
               alt="Image 1"
-              className="w-1/3 aspect-square object-cover "
+              className="md:w-1/3 aspect-square object-cover "
               width={1000}
               height={1000}
             />
             <Image
               src="/images/slide-image/image-2.jpeg"
               alt="Image 1"
-              className="w-1/3 aspect-square object-cover   "
+              className="md:w-1/3 aspect-square object-cover   "
               width={1000}
               height={1000}
             />
             <Image
               src="/images/slide-image/image-3.jpeg"
               alt="Image 1"
-              className="w-1/3 aspect-square object-cover  "
+              className="md:w-1/3 aspect-square object-cover  "
               width={1000}
               height={1000}
             />

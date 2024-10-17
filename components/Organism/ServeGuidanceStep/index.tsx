@@ -22,9 +22,9 @@ export default function ServeGuidanceStep({
           height={90}
         />
       </div>
-      <div className={`flex flex-col text-primary gap-2 md:gap-4 `}>
-        <div className={`text-lg md:text-2xl font-semibold`}>{title}</div>
-        <div className={`text-base md:text-lg font-medium`}>{desc}</div>
+      <div className={`flex flex-col text-text-themed gap-2 md:gap-4  `}>
+        <div className={`text-lg md:text-xl  font-heavitas`}>{title}</div>
+        <div className={`text-base  font-medium`}>{desc}</div>
       </div>
     </div>
   );

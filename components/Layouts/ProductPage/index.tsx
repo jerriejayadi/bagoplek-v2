@@ -14,7 +14,7 @@ const Products = ({ className }: ProductPageProps) => {
         width={1920}
         height={1080}
       />
-      <div className={`flex items-end justify-center`}>
+      {/* <div className={`flex items-end justify-center`}>
         <Image
           alt=""
           src={`/Vector-3.png`}
@@ -29,20 +29,20 @@ const Products = ({ className }: ProductPageProps) => {
           width={`500`}
           height={"100"}
         />
-      </div>
-      <div className={`p-6 md:py-11 md:px-16 ${className}  flex w-full`}>
+      </div> */}
+      <div className={`px-6 py-10 md:py-11 md:px-16 ${className}  flex w-full`}>
         <div
           className={`flex flex-col w-full  gap-10 md:gap-20 items-center justify-center`}
         >
           <div
-            className={`font-heavitas text-center  text-2xl  md:text-[40px] leading-normal tracking-wider sm:leading-loose text-text-themed`}
+            className={`font-heavitas text-center  text-base  md:text-[40px] leading-normal tracking-wider sm:leading-loose text-text-themed`}
           >
             EAT{" "}
-            <span className={`text-3xl md:text-[52px] text-primaryOrange`}>
+            <span className={`text-xl md:text-[52px] text-primaryOrange`}>
               NOW
             </span>{" "}
             OR{" "}
-            <span className={`text-3xl md:text-[52px] text-primaryOrange`}>
+            <span className={`text-xl md:text-[52px] text-primaryOrange`}>
               LATER
             </span>
             !
@@ -56,7 +56,7 @@ const Products = ({ className }: ProductPageProps) => {
               <div className={`flex aspect-square overflow-hidden `}>
                 <Image
                   alt=""
-                  className={`size-[400px] rounded-t-lg object-cover`}
+                  className={`md:size-[400px] rounded-t-lg object-cover`}
                   src={`/product/foto2.png`}
                   width={400}
                   height={400}
@@ -65,10 +65,10 @@ const Products = ({ className }: ProductPageProps) => {
               <div
                 className={`text-text-themed p-4 md:p-7 text-center font-semibold flex flex-col items-center`}
               >
-                <div className={`text-2xl p-4`}>
+                <div className={`text-2xl`}>
                   BAGOPLEK <span className={`font-black`}>PACKAGE</span>
                 </div>
-                <div className={`text-base mt-6`}>
+                <div className={`text-base mt-4 md:mt-6`}>
                   &bull; Isi 10 Pcs + 1 Sambal
                 </div>
                 <div className={`text-base`}>&bull; Isi 5 Pcs + 1 Sambal</div>
@@ -89,7 +89,7 @@ const Products = ({ className }: ProductPageProps) => {
               <div
                 className={`text-text-themed text-center font-semibold py-7 flex flex-col items-center`}
               >
-                <div className={`text-2xl p-4`}>
+                <div className={`text-2xl `}>
                   BAGOPLEK <span className={`font-black`}>FROZEN</span>
                 </div>
                 <div className={`text-base mt-5`}>

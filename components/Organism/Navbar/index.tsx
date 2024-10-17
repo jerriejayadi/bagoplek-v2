@@ -5,19 +5,20 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [navbarBackground, setNavbarBackground] = useState<boolean>(true);
   const sideBarRef = useRef<HTMLDivElement>(null);
 
   const controlNavbar = () => {
-    // if (window.scrollY > lastScrollY) {
-    //   // if scroll down hide the navbar
-    //   setShow(false);
-    // } else {
-    //   // if scroll up show the navbar
-    //   setShow(true);
-    // }
+    if (window.scrollY > lastScrollY) {
+      // if scroll down hide the navbar
+      setShow(false);
+    } else {
+      // if scroll up show the navbar
+      setShow(true);
+    }
 
     // remember current page location to use in the next move
     setLastScrollY(window.scrollY);
@@ -56,30 +57,42 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`flex items-center justify-center md:justify-between fixed  top-0 px-7 md:px-14 py-5  w-full max-w-[1920px] z-50 transition-all duration-300 ${
-          // show ? "translate-y-0" : "-translate-y-full"
-          ""
+        className={`flex items-center justify-center md:justify-between sticky md:fixed  top-0 px-7 md:px-14 py-5  w-full max-w-[1920px] z-50 transition-all duration-500 ${
+          show ? "translate-y-0" : "-translate-y-full md:translate-y-0"
         } ${navbarBackground ? "bg-[#FEFCF1]" : "bg-transparent"} z-50`}
       >
         {/* Hamburger Toggle */}
         <button
           onClick={() => {
-            setShow(true);
+            setShowSidebar(true);
           }}
           className={`absolute left-7 md:hidden`}
         >
-          <Image
-            className={``}
-            alt=""
-            src={"/icons/ci_hamburger-md.svg"}
-            width={40}
-            height={40}
-          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            className={`w-6`}
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M3 17h18M3 12h18M3 7h18"
+            ></path>
+          </svg>
         </button>
 
         {/* Bagoplek Logo */}
         <div className={``}>
-          <Image src={`/logo-bagoplek.png`} alt="" width={100} height={70} />
+          <Image
+            className={`w-16`}
+            src={`/logo-bagoplek.png`}
+            alt=""
+            width={1000}
+            height={100}
+          />
         </div>
 
         {/* Menu */}
@@ -113,13 +126,14 @@ const Navbar = () => {
       <div
         ref={sideBarRef}
         className={`md:hidden w-[90%] fixed left-0 h-screen bg-white top-0 z-50 ${
-          show ? "translate-x-0" : "-translate-x-full"
+          showSidebar ? "translate-x-0" : "-translate-x-full"
         } transition-all duration-500 px-8 pt-10`}
       >
         <div className={``}>
           <button
             onClick={() => {
-              setShow(false);
+              setShowSidebar(false);
+              setShow(true);
             }}
           >
             <svg
@@ -143,14 +157,31 @@ const Navbar = () => {
         >
           <Link
             onClick={() => {
-              setShow(false);
+              setShowSidebar(false);
+              setShow(true);
             }}
             href="/"
           >
             Beranda
           </Link>
-          <Link href="/products">Produk</Link>
-          <Link href="#">Lokasi</Link>
+          <Link
+            onClick={() => {
+              setShowSidebar(false);
+              setShow(true);
+            }}
+            href="/products"
+          >
+            Produk
+          </Link>
+          <Link
+            onClick={() => {
+              setShowSidebar(false);
+              setShow(true);
+            }}
+            href="/location"
+          >
+            Lokasi
+          </Link>
           {/* <Link
             onClick={() => {
               setShow(false);
@@ -161,7 +192,8 @@ const Navbar = () => {
           </Link> */}
           <Link
             onClick={() => {
-              setShow(false);
+              setShowSidebar(false);
+              setShow(true);
             }}
             href="/faq"
           >
