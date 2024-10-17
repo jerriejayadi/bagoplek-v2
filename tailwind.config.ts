@@ -63,6 +63,7 @@ const config: Config = {
         heavitas: ["var(--font-heavitas)"],
         barlow: ["var(--font-barlow)"],
         jakartaSans: ["var(--font-jakarta-sans)"],
+        lato: ["var(--lato)"],
       },
       keyframes: {
         marquee: {
