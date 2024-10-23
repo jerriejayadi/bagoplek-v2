@@ -29,30 +29,33 @@ export default function Location() {
           Find us in three different cities
         </p>
       </div>
-      <div className={`grid md:grid-cols-3 p-6 md:p-20 `}>
-        <div
-          className={`flex flex-col bg-[#F5DD7D] rounded-sm md:rounded-3xl aspect-square `}
-        >
-          <Image
-            className={`h-20 md:h-72 object-cover rounded-sm md:rounded-t-3xl aspect-square`}
-            alt={``}
-            src={`/images/partnership/partnership-1.jpeg`}
-            width={1000}
-            height={1000}
-          />
-          <div className={`p-2 md:p-10 text-center text-text-themed`}>
-            <h1 className={`text-base md:text-2xl font-heavitas`}>
-              Outlet{" "}
-              <span className={`text-primaryOrange`}>Citraland Surabaya</span>
-            </h1>
-            <p className={`text-sm md:text-base font-barlow font-medium`}>
-              Jl. Taman Puspa Raya, Surabaya
-            </p>
-            <p className={`text-sm md:text-base font-barlow font-medium`}>
-              031 - 374918
-            </p>
+      <div className={`grid md:grid-cols-3 p-6 md:p-20 gap-6 `}>
+        {[0, 1, 2, 3, 4].map((rows) => (
+          <div
+            key={rows}
+            className={`flex flex-col bg-white rounded-sm md:rounded-3xl shadow-xl `}
+          >
+            <Image
+              className={`h-20 md:h-72 object-cover rounded-sm md:rounded-t-3xl`}
+              alt={``}
+              src={`/images/partnership/partnership-1.jpeg`}
+              width={1000}
+              height={1000}
+            />
+            <div className={`p-2 md:p-6 text-center text-text-themed`}>
+              <h1 className={`text-base md:text-2xl font-heavitas`}>
+                Outlet{" "}
+                <span className={`text-primaryOrange`}>Citraland Surabaya</span>
+              </h1>
+              <p className={`text-sm md:text-base font-barlow font-medium`}>
+                Jl. Taman Puspa Raya, Surabaya
+              </p>
+              <p className={`text-sm md:text-base font-barlow font-medium`}>
+                031 - 374918
+              </p>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
       <Newsletter />
     </>

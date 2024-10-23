@@ -101,7 +101,7 @@ const Navbar = () => {
         >
           <Link href="/">Beranda</Link>
           <Link href="/products">Produk</Link>
-          <Link href="#">Lokasi</Link>
+          <Link href="/location">Lokasi</Link>
           {/* <Link
             onClick={() => {
               setShow(false);
