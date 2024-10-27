@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Organism/Navbar";
 import LocalFont from "next/font/local";
 import Footer from "@/components/Layouts/Footer";
+import BaseLayout from "@/components/Layouts/Layout";
+import { redirect } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 const barlow = Barlow({
@@ -43,11 +45,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${heavitas.variable} ${barlow.variable} ${lato.className}   max-w-[1920px] mx-auto bg-[#FFFDF3]`}
       >
-        <Navbar />
-        <main className={`py-0 md:py-28  `}>
-          {children}
-          <Footer />
-        </main>
+        <BaseLayout>{children}</BaseLayout>
       </body>
     </html>
   );
