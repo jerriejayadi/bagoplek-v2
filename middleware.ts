@@ -10,12 +10,12 @@ const intlMiddleware = createMiddleware({
 });
 
 export default function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname;
+  // const pathname = request.nextUrl.pathname;
 
-  // Avoid redirect loop by allowing the `/coming-soon` path
-  if (pathname !== "/en/coming-soon" && !pathname.startsWith("/api")) {
-    return NextResponse.redirect(new URL("/en/coming-soon", request.url));
-  }
+  // // Avoid redirect loop by allowing the `/coming-soon` path
+  // if (pathname !== "/en/coming-soon" && !pathname.startsWith("/api")) {
+  //   return NextResponse.redirect(new URL("/en/coming-soon", request.url));
+  // }
 
   // Allow locale handling on `/coming-soon` page and other paths
   return intlMiddleware(request);

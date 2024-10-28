@@ -122,7 +122,7 @@ export default function Home() {
       </div>
       <div className={``}>
         <h1
-          className={`m-7 text-base md:m-14 md:text-[40px] text-text-themed font-heavitas`}
+          className={`m-7 text-base md:m-14 md:text-[40px] text-text-themed font-heavitas md:leading-[60px]`}
         >
           SAVOR THE FLAVOUR <br />
           <span className={`text-primaryOrange text-xl md:text-[52px]`}>
