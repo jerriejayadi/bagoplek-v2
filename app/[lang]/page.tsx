@@ -1,17 +1,59 @@
-import LandingPage from "@/components/Layouts/LandingPage";
-import ProductPage from "@/components/Layouts/ProductPage";
-import ServeGuidancePage from "@/components/Layouts/ServeGuidancePage";
-import VideoPage from "@/components/Layouts/VideoPage";
+"use client";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { useState } from "react";
+
+const LOCATION_LIST = [
+  {
+    title: "Bagoplek Office",
+    address: "Jl. Mojo no.11B",
+    phone: "",
+    url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.2128044666783!2d112.6143422!3d-7.9769442999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883539578065f%3A0x3254e7f3f1e4831e!2sBagoplek%20-%20Office%20(Central%20Kitchen)!5e0!3m2!1sen!2sid!4v1728703675911!5m2!1sen!2sid&zoom=20",
+  },
+  {
+    title: "Pasar Oro Oro Dowo Malang",
+    address: "Jl. Mojo no.11B",
+    phone: "",
+    url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15805.174545231725!2d112.6280407!3d-7.9685754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629752adc2215%3A0x3da67ad2720f10f5!2sBagoplek%20-%20pasar%20oro%20oro%20dowo!5e0!3m2!1sen!2sid!4v1730083351915!5m2!1sen!2sid&zoom=20",
+  },
+  {
+    title: "Superindo Bendungan Sutami Malang",
+    address: "Jl. Bendungan sutami, gading kasri, Malang ",
+    phone: "",
+    url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3444649982657!2d112.61117370876815!3d-7.963308392028366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78832847b508af%3A0x795aa2530d95767d!2sSuperindo%20Bendungan%20Sutami%20Malang!5e0!3m2!1sen!2sid!4v1730083453129!5m2!1sen!2sid&zoom=20",
+  },
+  {
+    title: "Superindo Langsep Malang",
+    address: "Jl. Raya Langsep no. 5",
+    phone: "",
+    url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15804.941466952812!2d112.6130895!3d-7.9746092!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883754b4ec469%3A0xcc34a51f527fc8bd!2sBagoplek%20-%20Superindo%20Langsep!5e0!3m2!1sen!2sid!4v1730085966418!5m2!1sen!2sid&zoom=20",
+  },
+  {
+    title: "Lai-Lai Express",
+    address: "Jl. Puncak Mandala no. 19 Malang",
+    phone: "",
+    url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3259198495343!2d112.60190820876824!3d-7.965230492026447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788352d754fd11%3A0x36471d5010ee3e6b!2sBagoplek%20-%20Lai%20Lai%20Express!5e0!3m2!1sen!2sid!4v1730086007844!5m2!1sen!2sid&zoom=20",
+  },
+  {
+    title: "Citraland Fresh Market",
+    address: "Jl. Mojo no.11B",
+    phone: "",
+    url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.693872285857!2d112.64301600875821!3d-7.275632192701154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fdbf66b10c83%3A0xa1f01db494e731b2!2sBagoplek%20-%20Citraland!5e0!3m2!1sen!2sid!4v1730086047860!5m2!1sen!2sid&zoom=20",
+  },
+  {
+    title: "Indomaret Ahmad Yani",
+    address: "Jl. Ahmad Yani, Ngaglik, Kec Batu",
+    phone: "",
+    url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.217015689267!2d112.52041230876674!3d-7.872346392117084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788708e4eeb85b%3A0xd1cbd82041e960a2!2sBagoplek%20-%20Batu!5e0!3m2!1sen!2sid!4v1730086084120!5m2!1sen!2sid&zoom=20",
+  },
+];
 
 export default function Home() {
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
   return (
     <main className="flex min-h-screen flex-col justify-between ">
       <Image
@@ -41,13 +83,15 @@ export default function Home() {
             We are Spreading Around East Java
           </p>
         </div>
-        <div className={`relative w-full h-[284px] md:h-screen  `}>
+        <div
+          className={`relative w-full h-full md:h-screen flex gap-4 md:block p-4`}
+        >
           <div
-            className={`w-full absolute top-0 bg-gradient-to-l from-black/50 to-black/0 to-100% md:to-50% h-full overflow-hidden`}
+            className={`w-full mt-3 hidden md:flex absolute top-0 bg-gradient-to-l from-black/50 to-black/0 to-100% md:to-50% h-full overflow-hidden`}
           />
           <iframe
-            className={`w-full mt-7 md:mt-24 h-[284px] md:h-screen `}
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.2128044666783!2d112.6143422!3d-7.9769442999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883539578065f%3A0x3254e7f3f1e4831e!2sBagoplek%20-%20Office%20(Central%20Kitchen)!5e0!3m2!1sen!2sid!4v1728703675911!5m2!1sen!2sid&zoom=20"
+            className={`w-[50%] md:w-full h-[284px] md:h-screen `}
+            src={LOCATION_LIST[selectedIndex].url}
             width="600"
             allowFullScreen
             loading="lazy"
@@ -55,11 +99,11 @@ export default function Home() {
           />
 
           <div
-            className={`absolute top-0 w-full flex flex-col items-end justify-start p-4 md:pt-28 md:pr-40 overflow-hidden h-full `}
+            className={` md:absolute md:top-0 w-full md:w-full flex flex-col items-end justify-start md:p-4 md:pt-28 md:pr-40 overflow-hidden h-full `}
           >
             <div className={` flex flex-col overflow-hidden `}>
               <p
-                className={`text-white font-heavitas  z-40 text-xs md:text-2xl`}
+                className={`text-white font-heavitas  z-40 text-xs md:text-2xl hidden md:block`}
               >
                 Our <br />{" "}
                 <span className={`text-base md:text-4xl`}>Location</span>
@@ -69,17 +113,23 @@ export default function Home() {
                   align: "center",
                 }}
                 orientation="vertical"
-                className="w-[150px] md:w-full max-w-xs   "
+                className=" md:w-full max-w-xs"
               >
                 <CarouselContent className="-mt-1 md:h-[500px] h-[284px] ">
-                  {Array.from({ length: 5 }).map((_, index) => (
+                  {LOCATION_LIST.map((rows, index) => (
                     <CarouselItem
                       key={index}
                       className="pt-1 basis-1 md:basis-1/2"
                     >
                       <div className="p-1">
                         <div
-                          className={`flex flex-col bg-[#F5DD7D] rounded-sm md:rounded-3xl `}
+                          onClick={() => {
+                            setSelectedIndex(index);
+                          }}
+                          className={`flex flex-col bg-[#F5DD7D] rounded-sm md:rounded-3xl ${
+                            selectedIndex === index &&
+                            "border-2 border-yellow-300 shadow-yellow-500 shadow-md"
+                          }  transition-all duration-300 `}
                         >
                           <Image
                             className={`h-20 md:h-40 object-cover rounded-sm md:rounded-t-3xl`}
@@ -89,23 +139,23 @@ export default function Home() {
                             height={220}
                           />
                           <div
-                            className={`p-2 md:p-6 text-center text-text-themed`}
+                            className={`p-1 md:p-6 text-center text-text-themed`}
                           >
                             <h1
-                              className={`text-[9px] md:text-2xl font-heavitas`}
+                              className={`text-xs md:text-2xl font-heavitas text-primaryOrange`}
                             >
-                              Outlet{" "}
-                              <span className={`text-primaryOrange`}>
+                              {rows.title}
+                              {/* <span className={`text-primaryOrange`}>
                                 Citraland Surabaya
-                              </span>
+                              </span> */}
                             </h1>
                             <p
-                              className={`text-[6px] md:text-base font-barlow font-medium`}
+                              className={`text-[10px] md:text-base font-barlow font-medium`}
                             >
-                              Jl. Taman Puspa Raya, Surabaya
+                              {rows.address}
                             </p>
                             <p
-                              className={`text-[6px] md:text-base font-barlow font-medium`}
+                              className={`text-[10px] md:text-base font-barlow font-medium`}
                             >
                               031 - 374918
                             </p>

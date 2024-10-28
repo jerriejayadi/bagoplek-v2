@@ -25,7 +25,9 @@ export default function Footer() {
                 partnership?
               </span>
             </p>
-            <p className={`mt-4 text-[10px] text-text-themed font-lato font-bold`}>
+            <p
+              className={`mt-4 text-[10px] text-text-themed font-lato font-bold`}
+            >
               Click here for further information
             </p>
             <div
@@ -94,9 +96,8 @@ export default function Footer() {
             <div className={`flex flex-col `}>
               <div className={`font-bold`}>Menu</div>
               <div className={`mt-6 flex flex-col gap-4`}>
-                <Link href={`#`}>Catalog</Link>
-                <Link href={`#`}>Hot Listing</Link>
-                <Link href={`#`}>About Us</Link>
+                <Link href={`#`}>Produk</Link>
+                <Link href={`#`}>Lokasi</Link>
                 <Link href={`#`}>FAQ</Link>
               </div>
             </div>
@@ -127,7 +128,7 @@ export default function Footer() {
                   >
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"></path>
                   </svg>
-                  <p>bagoplek@gmail.com</p>
+                  <p>bagoplekindo@gmail.com</p>
                 </div>
                 <div className={`flex items-center gap-3`}>
                   <svg
@@ -147,7 +148,7 @@ export default function Footer() {
               <div
                 className={`mt-6 flex flex-row md:flex-col items-center md:items-start gap-6`}
               >
-                <svg
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -156,40 +157,42 @@ export default function Footer() {
                   className={`text-blue-500 size-7`}
                 >
                   <path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path>
-                </svg>
-                <Image
-                  className={`size-6`}
-                  alt=""
-                  src="/icons/instagram-new-2016-seeklogo.com.png"
-                  width={1000}
-                  height={1000}
-                />
+                </svg> */}
+                <Link
+                  href="https://www.instagram.com/bagoplek_id"
+                  target="_blank"
+                >
+                  <Image
+                    className={`size-6`}
+                    alt=""
+                    src="/icons/instagram-new-2016-seeklogo.com.png"
+                    width={1000}
+                    height={1000}
+                  />
+                </Link>
               </div>
             </div>
             <div>
               <h1 className={`font-bold`}>Online Store</h1>
-              <div className={`flex flex-wrap items-center`}>
-                <Image
-                  className={`w-28`}
-                  alt=""
-                  src="/go-food.png"
-                  width={1000}
-                  height={1000}
-                />
-                <Image
-                  className={`w-36 shrink-0  h-7 ml-4`}
-                  alt=""
-                  src="/grab-food.png"
-                  width={1000}
-                  height={1000}
-                />
-                <Image
-                  className={`w-36 `}
-                  alt=""
-                  src="/shopee.png"
-                  width={1000}
-                  height={1000}
-                />
+              <div className={`flex flex-wrap items-center mt-4`}>
+                <Link href="https://tokopedia.link/svaZXbIQGNb" target="_blank">
+                  <Image
+                    className={`w-36 `}
+                    alt=""
+                    src="/shopee.png"
+                    width={1000}
+                    height={1000}
+                  />
+                </Link>
+                <Link href="https://tokopedia.link/svaZXbIQGNb" target="_blank">
+                  <Image
+                    className={`w-36 shrink-0  h-auto ml-4`}
+                    alt=""
+                    src="/tokopedia.png"
+                    width={1000}
+                    height={1000}
+                  />
+                </Link>
               </div>
             </div>
           </div>
