@@ -12,7 +12,10 @@ export default function BaseLayout({
   const path = usePathname();
   const router = useRouter();
 
-  if (path !== "/coming-soon") {
+  useEffect(() => {
+    console.log(path);
+  }, []);
+  if (path === "/en/coming-soon") {
     return children;
   }
 
