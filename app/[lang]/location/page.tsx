@@ -1,6 +1,7 @@
 "use client";
 import Newsletter from "@/components/Layouts/NewsLetter/page";
 import Image from "next/image";
+import { LOCATION_LIST } from "../page";
 
 export default function Location() {
   return (
@@ -30,29 +31,34 @@ export default function Location() {
         </p>
       </div>
       <div className={`grid md:grid-cols-3 p-6 md:p-20 gap-6 `}>
-        {[0, 1, 2, 3, 4].map((rows) => (
+        {LOCATION_LIST.map((rows, index) => (
           <div
-            key={rows}
+            key={`location-${index}`}
             className={`flex flex-col bg-white rounded-sm md:rounded-3xl shadow-xl `}
           >
             <Image
-              className={`h-20 md:h-72 object-cover rounded-sm md:rounded-t-3xl`}
+              className={`aspect-video md:h-72 object-cover rounded-sm md:rounded-t-3xl`}
               alt={``}
               src={`/images/partnership/partnership-1.jpeg`}
               width={1000}
               height={1000}
             />
-            <div className={`p-2 md:p-6 text-center text-text-themed`}>
-              <h1 className={`text-base md:text-2xl font-heavitas`}>
-                Outlet{" "}
-                <span className={`text-primaryOrange`}>Citraland Surabaya</span>
+            <div
+              className={`px-2 py-4 md:p-6 text-center text-text-themed flex-grow  flex flex-col justify-between items-center`}
+            >
+              <h1
+                className={`text-base md:text-2xl font-heavitas text-primaryOrange align-middle `}
+              >
+                {rows.title}
               </h1>
-              <p className={`text-sm md:text-base font-barlow font-medium`}>
-                Jl. Taman Puspa Raya, Surabaya
-              </p>
-              <p className={`text-sm md:text-base font-barlow font-medium`}>
-                031 - 374918
-              </p>
+              <div className="mt-4">
+                <p className={`text-sm md:text-base font-barlow font-medium`}>
+                  {rows.address}
+                </p>
+                <p className={`text-sm md:text-base font-barlow font-medium`}>
+                  031 - 374918
+                </p>
+              </div>
             </div>
           </div>
         ))}

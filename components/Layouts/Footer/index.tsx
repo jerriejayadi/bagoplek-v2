@@ -34,7 +34,7 @@ export default function Footer() {
               onClick={() => {
                 console.log("hello");
               }}
-              className={`mt-4 bg-primaryOrange text-white w-full md:max-w-[450px]  hover:cursor-pointer flex items-center gap-2 justify-between transition-all duration-150 rounded-[10px] md:rounded-[20px] `}
+              className={`mt-4 bg-primaryOrange hover:bg-opacity-80 text-white w-full md:max-w-[450px]  hover:cursor-pointer flex items-center gap-2 justify-between transition-all duration-150 rounded-[10px] md:rounded-[20px] `}
             >
               <div
                 className={`flex text-center w-full justify-center items-center text-sm md:text-xl gap-5 `}

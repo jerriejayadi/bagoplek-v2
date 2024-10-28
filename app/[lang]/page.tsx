@@ -7,28 +7,28 @@ import {
 import Image from "next/image";
 import { useState } from "react";
 
-const LOCATION_LIST = [
+export const LOCATION_LIST = [
   {
     title: "Bagoplek Office",
-    address: "Jl. Mojo no.11B",
+    address: "Jl. Mojo No.11b, Bareng, Malang",
     phone: "",
     url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.2128044666783!2d112.6143422!3d-7.9769442999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883539578065f%3A0x3254e7f3f1e4831e!2sBagoplek%20-%20Office%20(Central%20Kitchen)!5e0!3m2!1sen!2sid!4v1728703675911!5m2!1sen!2sid&zoom=20",
   },
   {
     title: "Pasar Oro Oro Dowo Malang",
-    address: "Jl. Mojo no.11B",
+    address: "Jl. Guntur No.20, Oro-oro Dowo, Malang",
     phone: "",
     url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15805.174545231725!2d112.6280407!3d-7.9685754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629752adc2215%3A0x3da67ad2720f10f5!2sBagoplek%20-%20pasar%20oro%20oro%20dowo!5e0!3m2!1sen!2sid!4v1730083351915!5m2!1sen!2sid&zoom=20",
   },
   {
     title: "Superindo Bendungan Sutami Malang",
-    address: "Jl. Bendungan sutami, gading kasri, Malang ",
+    address: "Jl. Bendungan Sutami, Gading Kasri, Malang",
     phone: "",
     url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3444649982657!2d112.61117370876815!3d-7.963308392028366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78832847b508af%3A0x795aa2530d95767d!2sSuperindo%20Bendungan%20Sutami%20Malang!5e0!3m2!1sen!2sid!4v1730083453129!5m2!1sen!2sid&zoom=20",
   },
   {
     title: "Superindo Langsep Malang",
-    address: "Jl. Raya Langsep no. 5",
+    address: "Jl. Raya Langsep No.5, Bareng, Malang",
     phone: "",
     url: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15804.941466952812!2d112.6130895!3d-7.9746092!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883754b4ec469%3A0xcc34a51f527fc8bd!2sBagoplek%20-%20Superindo%20Langsep!5e0!3m2!1sen!2sid!4v1730085966418!5m2!1sen!2sid&zoom=20",
   },
@@ -46,7 +46,7 @@ const LOCATION_LIST = [
   },
   {
     title: "Indomaret Ahmad Yani",
-    address: "Jl. Ahmad Yani, Ngaglik, Kec Batu",
+    address: "Jl. Ahmad Yani, Ngaglik, Batu",
     phone: "",
     url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.217015689267!2d112.52041230876674!3d-7.872346392117084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788708e4eeb85b%3A0xd1cbd82041e960a2!2sBagoplek%20-%20Batu!5e0!3m2!1sen!2sid!4v1730086084120!5m2!1sen!2sid&zoom=20",
   },
@@ -87,10 +87,10 @@ export default function Home() {
           className={`relative w-full h-full md:h-screen flex gap-4 md:block p-4`}
         >
           <div
-            className={`w-full mt-3 hidden md:flex absolute top-0 bg-gradient-to-l from-black/50 to-black/0 to-100% md:to-50% h-full overflow-hidden`}
+            className={`w-full mt-3 hidden md:flex absolute top-0 bg-gradient-to-l from-black/50 to-black/0 to-100% md:to-50% h-full overflow-hidden pointer-events-none z-10`}
           />
           <iframe
-            className={`w-[50%] md:w-full h-[284px] md:h-screen `}
+            className={`w-[50%] md:w-full h-[284px] md:h-screen  z-0`}
             src={LOCATION_LIST[selectedIndex].url}
             width="600"
             allowFullScreen
@@ -99,7 +99,7 @@ export default function Home() {
           />
 
           <div
-            className={` md:absolute md:top-0 w-full md:w-full flex flex-col items-end justify-start md:p-4 md:pt-28 md:pr-40 overflow-hidden h-full `}
+            className={` md:absolute md:top-20 flex flex-col items-end justify-start  overflow-hidden right-40 z-10 cursor-pointer`}
           >
             <div className={` flex flex-col overflow-hidden `}>
               <p

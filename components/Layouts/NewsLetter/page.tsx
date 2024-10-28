@@ -33,7 +33,7 @@ export default function Newsletter() {
               onClick={() => {
                 console.log("hello");
               }}
-              className={`bg-[#FFDA48] w-full   hover:cursor-pointer text-text-themed  flex items-center gap-2 justify-between transition-all duration-150 rounded-[20px] `}
+              className={`bg-[#FFDA48] hover:bg-opacity-90 w-full   hover:cursor-pointer text-text-themed  flex items-center gap-2 justify-between transition-all duration-150 rounded-[20px] `}
             >
               <div
                 className={`flex text-start items-center md:text-xl gap-5 pl-4 md:pl-7 py-2 `}
