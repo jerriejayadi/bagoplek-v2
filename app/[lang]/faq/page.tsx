@@ -3,6 +3,109 @@ import Newsletter from "@/components/Layouts/NewsLetter/page";
 import Image from "next/image";
 import Link from "next/link";
 
+const FAQ_LIST = [
+  {
+    id: "1",
+    question: "Apa itu Bagoplek?",
+    category: "Umum",
+    answer:
+      "Bagoplek adalah brand bakso goreng yang menawarkan rasa gurih dan renyah, yang cocok untuk dinikmati langsung atau menjadi menu tambahan di berbagai restoran.",
+  },
+  {
+    id: "2",
+    question: "Di mana saya bisa membeli bakso goreng Bagoplek?",
+    category: "Umum",
+    answer:
+      "Anda dapat menemukan booth Bagoplek di pasar-pasar dan di depan beberapa minimarket terdekat. Untuk mengetahui lokasi booth kami, silakan cek di bagian lokasi pada website kami.",
+  },
+  {
+    id: "3",
+    question: "Apakah Bagoplek tersedia untuk pemesanan dalam jumlah besar?",
+    category: "Umum",
+    answer:
+      "Ya, Bagoplek menyediakan pemesanan dalam jumlah besar untuk acara, pesta, atau kebutuhan lainnya. Silakan hubungi kami untuk informasi lebih lanjut.",
+  },
+  {
+    id: "4",
+    question: "Apakah Bagoplek memiliki layanan pengiriman?",
+    category: "Umum",
+    answer:
+      "Saat ini, pengiriman Bagoplek tersedia melalui platform ojek online. Silakan cek area yang mencakup layanan kami.",
+  },
+  {
+    id: "5",
+    question: "Apakah Bagoplek menyediakan bakso goreng untuk restoran?",
+    category: "Restoran",
+    answer:
+      "Ya, kami menyediakan bakso goreng dalam jumlah besar khusus untuk restoran yang ingin menjual menu bakso goreng Bagoplek di tempat mereka.",
+  },
+  {
+    id: "6",
+    question:
+      "Bagaimana cara restoran untuk memesan bakso goreng dari Bagoplek?",
+    category: "Restoran",
+    answer:
+      "Restoran dapat menghubungi tim sales kami melalui kontak di website untuk mendiskusikan kebutuhan dan jumlah pesanan sesuai dengan kebutuhan bisnis Anda.",
+  },
+  {
+    id: "7",
+    question: "Apakah ada minimum order untuk restoran?",
+    category: "Restoran",
+    answer:
+      "Ya, untuk memenuhi kebutuhan suplai, kami menetapkan minimum order khusus bagi pemesanan restoran. Hubungi kami untuk detail lebih lanjut.",
+  },
+  {
+    id: "8",
+    question:
+      "Apakah Bagoplek memberikan diskon untuk pemesanan dalam jumlah besar bagi restoran?",
+    category: "Restoran",
+    answer:
+      "Kami memberikan penawaran khusus dan diskon berdasarkan jumlah pesanan bulanan. Untuk informasi harga khusus, silakan hubungi tim kami.",
+  },
+  {
+    id: "0",
+    question: "Apakah Bagoplek Halal?",
+    category: "Produk",
+    answer: "Ya, Bagoplek Halal dengan menggunakan bahan dasar daging Ayam",
+  },
+  {
+    id: "9",
+    question: "Apakah bakso goreng Bagoplek menggunakan bahan pengawet?",
+    category: "Produk",
+    answer:
+      "Tidak, bakso goreng Bagoplek dibuat tanpa bahan pengawet sehingga aman dikonsumsi dan tetap mempertahankan rasa asli.",
+  },
+  {
+    id: "10",
+    question:
+      "Bagaimana cara menyimpan bakso goreng Bagoplek agar tetap renyah?",
+    category: "Produk",
+    answer:
+      "Bakso goreng sebaiknya disimpan dalam wadah tertutup dan diletakkan di tempat yang sejuk untuk menjaga tekstur dan kesegarannya.",
+  },
+  {
+    id: "11",
+    question: "Apakah Bagoplek tersedia dalam berbagai varian rasa?",
+    category: "Produk",
+    answer:
+      "Saat ini, Bagoplek menawarkan rasa original yang sudah disukai banyak orang, namun kami sedang mengembangkan varian rasa baru. Nantikan informasi terbaru di website kami.",
+  },
+  {
+    id: "12",
+    question: "Metode pembayaran apa saja yang diterima Bagoplek?",
+    category: "Pembayaran",
+    answer:
+      "Kami menerima pembayaran tunai di booth dan juga melalui transfer bank atau dompet digital untuk pemesanan besar maupun untuk restoran.",
+  },
+  {
+    id: "13",
+    question: "Apakah ada biaya tambahan untuk pengiriman?",
+    category: "Pembayaran",
+    answer:
+      "Ya, biaya pengiriman mengikuti tarif layanan pihak ketiga atau ojek online yang digunakan untuk mengirimkan produk ke lokasi Anda.",
+  },
+];
+
 export default function FAQ() {
   return (
     <main className={`flex flex-col relative items-center w-full`}>
@@ -30,8 +133,13 @@ export default function FAQ() {
         </div>
       </div>
       <div
-        className={`max-w-[1080px] px-4 flex flex-col items-center justify-center gap-6 mt-16 mb-40`}
+        className={`w-full max-w-[1080px] px-4 flex flex-col items-center justify-center gap-6 mt-16 mb-40`}
       >
+        {FAQ_LIST.map((rows) => (
+          <Accordion key={`faq-${rows.id}`} title={rows.question}>
+            {rows.answer}
+          </Accordion>
+        ))}
         <Accordion title={"Apakah Bagoplek Halal?"}>
           Ya, Bagoplek Halal dengan menggunakan bahan dasar daging Ayam
         </Accordion>
