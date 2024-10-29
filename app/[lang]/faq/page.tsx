@@ -30,7 +30,7 @@ const FAQ_LIST = [
     question: "Apakah Bagoplek memiliki layanan pengiriman?",
     category: "Umum",
     answer:
-      "Saat ini, pengiriman Bagoplek tersedia melalui platform ojek online. Silakan cek area yang mencakup layanan kami.",
+      "Saat ini, pengiriman Bagoplek tersedia melalui platform ojek online dan beberapa layanan pengiriman lokal. Silakan cek area yang mencakup layanan kami.",
   },
   {
     id: "5",
@@ -95,7 +95,7 @@ const FAQ_LIST = [
     question: "Metode pembayaran apa saja yang diterima Bagoplek?",
     category: "Pembayaran",
     answer:
-      "Kami menerima pembayaran tunai di booth dan juga melalui transfer bank atau dompet digital untuk pemesanan besar maupun untuk restoran.",
+      "Kami menerima pembayaran tunai di booth dan juga melalui transfer bank atau dompet digital.",
   },
   {
     id: "13",
