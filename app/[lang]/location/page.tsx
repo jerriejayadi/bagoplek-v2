@@ -1,8 +1,7 @@
 "use client";
 import Newsletter from "@/components/Layouts/NewsLetter/page";
 import Image from "next/image";
-import { LOCATION_LIST } from "../page";
-import { convertEmbeddedToDirectMapURL } from "@/lib/utils";
+import { convertEmbeddedToDirectMapURL, LOCATION_LIST } from "@/lib/utils";
 import Link from "next/link";
 
 export default function Location() {
