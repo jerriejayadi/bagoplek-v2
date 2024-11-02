@@ -8,7 +8,6 @@ import { LOCATION_LIST } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
 
-
 export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   return (
@@ -92,7 +91,10 @@ export default function Home() {
                           <Image
                             className={`h-20 md:h-40 object-cover rounded-sm md:rounded-t-3xl`}
                             alt={``}
-                            src={`/images/partnership/partnership-1.jpeg`}
+                            src={
+                              rows.locationImage ??
+                              `/images/partnership/partnership-1.jpeg`
+                            }
                             width={1000}
                             height={220}
                           />

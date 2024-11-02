@@ -42,7 +42,9 @@ export default function Location() {
             <Image
               className={`aspect-video md:h-72 object-cover rounded-sm md:rounded-t-3xl`}
               alt={``}
-              src={`/images/partnership/partnership-1.jpeg`}
+              src={
+                rows.locationImage || `/images/partnership/partnership-1.jpeg`
+              }
               width={1000}
               height={1000}
             />

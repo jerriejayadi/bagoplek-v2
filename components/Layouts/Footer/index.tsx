@@ -87,8 +87,9 @@ export default function Footer() {
             height={2920}
           />
           <p className={`text-text-themed font-barlow mt-4`}>
-            Lorem ipsum dolor sit amet consectetur. Porttitor at habitant id
-            viverra. Ut laoreet sagittis at aliquet.
+            Bagoplek: Plekin aja!
+            <br />
+            BAKSO GORENG AYAM • HALAL
           </p>
         </div>
         <div className={`md:ml-28 `}>
@@ -96,9 +97,24 @@ export default function Footer() {
             <div className={`flex flex-col `}>
               <div className={`font-bold`}>Menu</div>
               <div className={`mt-6 flex flex-col gap-4`}>
-                <Link href={`#`}>Produk</Link>
-                <Link href={`#`}>Lokasi</Link>
-                <Link href={`#`}>FAQ</Link>
+                <Link
+                  className="hover:text-primaryOrange transition-all duration-150"
+                  href={`/products`}
+                >
+                  Produk
+                </Link>
+                <Link
+                  className="hover:text-primaryOrange transition-all duration-150"
+                  href={`/location`}
+                >
+                  Lokasi
+                </Link>
+                <Link
+                  className="hover:text-primaryOrange transition-all duration-150"
+                  href={`/faq`}
+                >
+                  FAQ
+                </Link>
               </div>
             </div>
             <div className={`flex flex-col `}>
@@ -115,7 +131,12 @@ export default function Footer() {
                   >
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z"></path>
                   </svg>
-                  <p>+62 811 2345 6789</p>
+                  <Link
+                    className="hover:text-primaryOrange"
+                    href="https://wa.me/+6289515399006"
+                  >
+                    +62 895 1539 9006
+                  </Link>
                 </div>
                 <div className={`flex items-center gap-3`}>
                   <svg
@@ -128,7 +149,12 @@ export default function Footer() {
                   >
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"></path>
                   </svg>
-                  <p>bagoplekindo@gmail.com</p>
+                  <Link
+                    className="hover:text-primaryOrange"
+                    href="mailto:bagoplekindo@gmail.com"
+                  >
+                    bagoplekindo@gmail.com
+                  </Link>
                 </div>
                 <div className={`flex items-center gap-3`}>
                   <svg
@@ -139,7 +165,12 @@ export default function Footer() {
                   >
                     <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
                   </svg>
-                  <p>Jl. Mojo No.11b Malang</p>
+                  <Link
+                    className="hover:text-primaryOrange"
+                    href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.2128044666783!2d112.6143422!3d-7.9769442999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883539578065f%3A0x3254e7f3f1e4831e!2sBagoplek%20-%20Office%20(Central%20Kitchen)!5e0!3m2!1sen!2sid!4v1728703675911!5m2!1sen!2sid&zoom=20"
+                  >
+                    Jl. Mojo No.11b Malang
+                  </Link>
                 </div>
               </div>
             </div>
@@ -184,11 +215,23 @@ export default function Footer() {
                     height={1000}
                   />
                 </Link>
-                <Link href="https://tokopedia.link/svaZXbIQGNb" target="_blank">
+                <Link href="https://id.shp.ee/MxiAsFn" target="_blank">
                   <Image
                     className={`w-36 shrink-0  h-auto ml-4`}
                     alt=""
                     src="/tokopedia.png"
+                    width={1000}
+                    height={1000}
+                  />
+                </Link>
+                <Link
+                  href="https://r.grab.com/g/6-20241102_101705_7cb015135ee5a451_MEXMPS-6-C4CTBFLAAVJZL6"
+                  target="_blank"
+                >
+                  <Image
+                    className={`w-32 shrink-0  h-auto ml-4`}
+                    alt=""
+                    src="/grab-food.png"
                     width={1000}
                     height={1000}
                   />
