@@ -5,7 +5,7 @@ import router from "next/navigation";
 export default function Footer() {
   return (
     <footer className={`w-full`}>
-      <div className={`w-full relative`}>
+      {/* <div className={`w-full relative`}>
         <Image
           className={`w-full h-[600px] md:h-[800px] shrink-0 object-cover md:object-fill `}
           alt=""
@@ -74,7 +74,7 @@ export default function Footer() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
       <div
         className={`bg-white flex flex-col gap-6 p-8 md:p-16 text-text-themed md:flex-row -mt-2`}
       >
@@ -95,7 +95,7 @@ export default function Footer() {
         <div className={`md:ml-28 `}>
           <div className={`flex flex-col gap-8 md:gap-20 md:flex-row`}>
             <div className={`flex flex-col `}>
-              <div className={`font-bold`}>Menu</div>
+              <div className={`font-bold`}>{`Menu`.toUpperCase()}</div>
               <div className={`mt-6 flex flex-col gap-4`}>
                 <Link
                   className="hover:text-primaryOrange transition-all duration-150"
@@ -175,7 +175,7 @@ export default function Footer() {
               </div>
             </div>
             <div className={`flex flex-col `}>
-              <div className="font-bold">Follow Us</div>
+              <div className="font-bold">{`Follow Us`.toUpperCase()}</div>
               <div
                 className={`mt-6 flex flex-row md:flex-col items-center md:items-start gap-6`}
               >
@@ -192,6 +192,7 @@ export default function Footer() {
                 <Link
                   href="https://www.instagram.com/bagoplek_id"
                   target="_blank"
+                  className="flex items-center gap-2"
                 >
                   <Image
                     className={`size-6`}
@@ -200,15 +201,16 @@ export default function Footer() {
                     width={1000}
                     height={1000}
                   />
+                  <p>@bagoplek_id</p>
                 </Link>
               </div>
             </div>
             <div>
-              <h1 className={`font-bold`}>Online Store</h1>
+              <h1 className={`font-bold`}>{`Online Stores`.toUpperCase()}</h1>
               <div className={`flex flex-wrap items-center mt-4`}>
                 <Link href="https://tokopedia.link/svaZXbIQGNb" target="_blank">
                   <Image
-                    className={`w-36 `}
+                    className={`w-36 object-contain `}
                     alt=""
                     src="/shopee.png"
                     width={1000}
@@ -217,7 +219,7 @@ export default function Footer() {
                 </Link>
                 <Link href="https://id.shp.ee/MxiAsFn" target="_blank">
                   <Image
-                    className={`w-36 shrink-0  h-auto ml-4`}
+                    className={`w-36 object-contain shrink-0  h-auto ml-4`}
                     alt=""
                     src="/tokopedia.png"
                     width={1000}

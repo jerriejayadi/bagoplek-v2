@@ -54,7 +54,7 @@ export const LOCATION_LIST = [
   },
   {
     title: "Citraland Fresh Market",
-    address: "Jl. Mojo no.11B",
+    address: "Jl. Taman Puspa Raya, Surabaya",
     phone: "+62-852-9878-2570",
     city: "Surabaya",
     googleMapsURL: "https://maps.app.goo.gl/AeKfjcKNzSH2zgvW9",

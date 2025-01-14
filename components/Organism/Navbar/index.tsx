@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
+  const path = usePathname();
   const [show, setShow] = useState(true);
   const [showSidebar, setShowSidebar] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -85,23 +87,50 @@ const Navbar = () => {
         </button>
 
         {/* Bagoplek Logo */}
-        <div className={``}>
+        <Link href="/" className={``}>
           <Image
-            className={`w-16`}
+            className={`h-16 w-auto`}
             src={`/logo-bagoplek.png`}
             alt=""
             width={1000}
             height={100}
           />
-        </div>
+        </Link>
 
         {/* Menu */}
         <div
-          className={` flex-col md:flex-row gap-10 font-bold hidden md:flex text-text-themed`}
+          className={`mt-4 flex-col md:flex-row gap-10 font-bold hidden md:flex text-text-themed`}
         >
-          <Link href="/">Beranda</Link>
-          <Link href="/products">Produk</Link>
-          <Link href="/location">Lokasi</Link>
+          <Link
+            onClick={() => {
+              setShow(false);
+            }}
+            className="flex flex-col items-center"
+            href="/"
+          >
+            Beranda
+            {path === "/en" && <p className="text-[10px]">&#x2022;</p>}
+          </Link>
+          <Link
+            onClick={() => {
+              setShow(false);
+            }}
+            className="flex flex-col items-center"
+            href="/en/products"
+          >
+            Produk
+            {path === "/en/products" && <p className="text-[10px]">&#x2022;</p>}
+          </Link>
+          <Link
+            onClick={() => {
+              setShow(false);
+            }}
+            className="flex flex-col items-center"
+            href="/location"
+          >
+            Lokasi
+            {path === "/en/location" && <p className="text-[10px]">&#x2022;</p>}
+          </Link>
           {/* <Link
             onClick={() => {
               setShow(false);
@@ -114,9 +143,11 @@ const Navbar = () => {
             onClick={() => {
               setShow(false);
             }}
+            className="flex flex-col items-center"
             href="/faq"
           >
             FAQ
+            {path === "/en/faq" && <p className="text-[10px]">&#x2022;</p>}
           </Link>
         </div>
 

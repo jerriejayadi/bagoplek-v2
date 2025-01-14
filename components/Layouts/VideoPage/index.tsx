@@ -42,10 +42,10 @@ const VideoPage = ({ className }: VideoPageProps) => {
       >
         <div className={`flex flex-col w-full  gap-10 md:gap-20`}>
           <div
-            className={`font-heavitas font-normal text-2xl  md:w-[60%] md:text-5xl leading-normal tracking-wider md:leading-[70px] text-primary`}
+            className={`font-heavitas font-normal text-2xl  md:w-[60%] md:text-5xl leading-normal tracking-wider md:leading-[70px] text-text-themed`}
           >
             THERE’S A LITTLE BIT OF{" "}
-            <span className={`md:text-[64px] text-4xl text-primaryOrange`}>
+            <span className={`md:text-[64px] text-4xl text-text-themedOrange`}>
               MAGIC
             </span>{" "}
             IN EVERY BITE

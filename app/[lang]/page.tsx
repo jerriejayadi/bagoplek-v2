@@ -92,7 +92,7 @@ export default function Home() {
                             className={`h-20 md:h-40 object-cover rounded-sm md:rounded-t-3xl`}
                             alt={``}
                             src={
-                              rows.locationImage ??
+                              rows.locationImage ||
                               `/images/partnership/partnership-1.jpeg`
                             }
                             width={1000}

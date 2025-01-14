@@ -11,9 +11,9 @@ export default function ProductPage() {
       <div className={`p-6 md:p-0 md:pl-16`}>
         <ServeGuidancePage />
       </div>
-      <div>
+      {/* <div>
         <Newsletter/>
-      </div>
+      </div> */}
     </>
   );
 }
