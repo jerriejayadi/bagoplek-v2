@@ -1,7 +1,20 @@
+"use client";
 import Accordion from "@/components/Atoms/accordion";
 import Newsletter from "@/components/Layouts/NewsLetter/page";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
+
+type FAQ = {
+  id: string;
+  question: string;
+  category: string;
+  answer: string;
+};
+
+type GroupedFAQ = {
+  [key: string]: FAQ[];
+};
 
 const FAQ_LIST = [
   {
@@ -25,16 +38,10 @@ const FAQ_LIST = [
     answer:
       "Ya, Bagoplek menyediakan pemesanan dalam jumlah besar untuk acara, pesta, atau kebutuhan lainnya. Silakan hubungi kami untuk informasi lebih lanjut.",
   },
-  {
-    id: "4",
-    question: "Apakah Bagoplek memiliki layanan pengiriman?",
-    category: "Umum",
-    answer:
-      "Saat ini, pengiriman Bagoplek tersedia melalui platform ojek online dan beberapa layanan pengiriman lokal. Silakan cek area yang mencakup layanan kami.",
-  },
+
   {
     id: "5",
-    question: "Apakah Bagoplek menyediakan bakso goreng untuk restoran?",
+    question: "Apakah Bagoplek menerima pesanan untuk restoran?",
     category: "Restoran",
     answer:
       "Ya, kami menyediakan bakso goreng dalam jumlah besar khusus untuk restoran yang ingin menjual menu bakso goreng Bagoplek di tempat mereka.",
@@ -42,7 +49,7 @@ const FAQ_LIST = [
   {
     id: "6",
     question:
-      "Bagaimana cara restoran untuk memesan bakso goreng dari Bagoplek?",
+      "Bagaimana cara restoran dapat memesan bakso goreng dari Bagoplek?",
     category: "Restoran",
     answer:
       "Restoran dapat menghubungi tim sales kami melalui kontak di website untuk mendiskusikan kebutuhan dan jumlah pesanan sesuai dengan kebutuhan bisnis Anda.",
@@ -70,7 +77,7 @@ const FAQ_LIST = [
   },
   {
     id: "9",
-    question: "Apakah bakso goreng Bagoplek menggunakan bahan pengawet?",
+    question: "Apakah Bagoplek menggunakan bahan pengawet?",
     category: "Produk",
     answer:
       "Tidak, bakso goreng Bagoplek dibuat tanpa bahan pengawet sehingga aman dikonsumsi dan tetap mempertahankan rasa asli.",
@@ -93,20 +100,59 @@ const FAQ_LIST = [
   {
     id: "12",
     question: "Metode pembayaran apa saja yang diterima Bagoplek?",
-    category: "Pembayaran",
+    category: "Pembayaran & Pengiriman",
     answer:
       "Kami menerima pembayaran tunai di booth dan juga melalui transfer bank atau dompet digital.",
   },
   {
     id: "13",
     question: "Apakah ada biaya tambahan untuk pengiriman?",
-    category: "Pembayaran",
+    category: "Pembayaran & Pengiriman",
     answer:
       "Ya, biaya pengiriman mengikuti tarif layanan pihak ketiga atau ojek online yang digunakan untuk mengirimkan produk ke lokasi Anda.",
   },
+  {
+    id: "4",
+    question: "Apakah Bagoplek memiliki layanan pengiriman?",
+    category: "Pembayaran & Pengiriman",
+    answer:
+      "Saat ini, pengiriman Bagoplek tersedia melalui platform ojek online dan beberapa layanan pengiriman lokal. Silakan cek area yang mencakup layanan kami.",
+  },
 ];
 
+const groupedFAQs = Object.entries(
+  FAQ_LIST.reduce<GroupedFAQ>((acc, faq) => {
+    // Kelompokkan berdasarkan kategori
+    if (!acc[faq.category]) {
+      acc[faq.category] = [];
+    }
+    acc[faq.category].push(faq);
+    return acc;
+  }, {})
+);
+
+const faqWithTitles = groupedFAQs.map(([category, faqs]) => ({
+  title: category,
+  faqs,
+}));
+
+console.log(groupedFAQs);
+
 export default function FAQ() {
+  useEffect(() => {
+    const groupedFAQs = Object.entries(
+      FAQ_LIST.reduce<GroupedFAQ>((acc, faq) => {
+        // Kelompokkan berdasarkan kategori
+        if (!acc[faq.category]) {
+          acc[faq.category] = [];
+        }
+        acc[faq.category].push(faq);
+        return acc;
+      }, {})
+    );
+
+    console.log(groupedFAQs[0]);
+  }, [FAQ_LIST]);
   return (
     <main className={`flex flex-col relative items-center w-full`}>
       <div
@@ -128,19 +174,34 @@ export default function FAQ() {
             FAQ
           </div>
           <div className={`text-4xl font-barlow  text-[#715B3C] text-center `}>
-            Frequently Asked Question
+            Frequently Asked Questions
           </div>
         </div>
       </div>
       <div
-        className={`w-full max-w-[1080px] px-4 flex flex-col items-center justify-center gap-6 mt-16 mb-40`}
+        className={`w-full max-w-[1080px] px-4 flex flex-col items-start justify-center gap-6 mt-16 mb-40`}
       >
-        {FAQ_LIST.map((rows) => (
+        {/* {FAQ_LIST.map((rows) => (
           <Accordion key={`faq-${rows.id}`} title={rows.question}>
             {rows.answer}
           </Accordion>
+        ))} */}
+        {faqWithTitles.map((rows) => (
+          <>
+            <p className="text-2xl font-semibold text-text-themed ">
+              {rows.title}
+            </p>
+            <div className="flex flex-col w-full gap-6 mb-6">
+              {rows.faqs.map((faqs) => (
+                <Accordion key={`faq-${faqs.id}`} title={faqs.question}>
+                  {faqs.answer}
+                </Accordion>
+              ))}
+            </div>
+          </>
         ))}
-        <Accordion title={"Apakah Bagoplek Halal?"}>
+
+        {/* <Accordion title={"Apakah Bagoplek Halal?"}>
           Ya, Bagoplek Halal dengan menggunakan bahan dasar daging Ayam
         </Accordion>
         <Accordion title={"Berapa lama kadaluarsa produk Bagoplek?"}>
@@ -166,7 +227,7 @@ export default function FAQ() {
           }
         >
           Ya, Bagoplek Halal dengan menggunakan bahan dasar daging Ayam
-        </Accordion>
+        </Accordion> */}
       </div>
       {/* <div
         className={`mt-16 w-full py-20 flex flex-col items-center justify-center bg-gradient-to-b from-yellow-400 to to-yellow-200 min-h-screen`}

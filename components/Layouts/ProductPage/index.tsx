@@ -9,7 +9,7 @@ const Products = ({ className }: ProductPageProps) => {
     <div className={`relative w-full shrink-0`}>
       <Image
         alt=""
-        src={`/images/product/thumbnail.jpeg`}
+        src={`/images/product/thumbnail-2.jpg`}
         className={``}
         width={1920}
         height={1080}
@@ -30,7 +30,7 @@ const Products = ({ className }: ProductPageProps) => {
           height={"100"}
         />
       </div> */}
-      <div className={`px-6 py-10 md:py-11 md:px-16 ${className}  flex w-full`}>
+      <div className={`px-6 py-10 md:py-20 md:px-16 ${className}  flex w-full`}>
         <div
           className={`flex flex-col w-full  gap-10 md:gap-20 items-center justify-center`}
         >
@@ -56,8 +56,8 @@ const Products = ({ className }: ProductPageProps) => {
               <div className={`flex aspect-square overflow-hidden `}>
                 <Image
                   alt=""
-                  className={`md:size-[400px] rounded-t-lg object-cover`}
-                  src={`/product/foto2.png`}
+                  className={`md:size-[400px] rounded-t-[20px] object-cover`}
+                  src={`/product/ready-to-eat.jpg`}
                   width={400}
                   height={400}
                 />
@@ -66,7 +66,7 @@ const Products = ({ className }: ProductPageProps) => {
                 className={`text-text-themed p-4 md:p-7 text-center font-semibold flex flex-col items-center`}
               >
                 <div className={`text-2xl`}>
-                  BAGOPLEK <span className={`font-black`}>PACKAGE</span>
+                  BAGOPLEK <span className={`font-black`}>READY TO EAT</span>
                 </div>
                 <div className={`text-base mt-4 md:mt-6`}>
                   &bull; Isi 10 Pcs + 1 Sambal
@@ -80,8 +80,8 @@ const Products = ({ className }: ProductPageProps) => {
               <div className={`flex aspect-square overflow-hidden `}>
                 <Image
                   alt=""
-                  className={`size-[400px] rounded-t-lg object-cover`}
-                  src={`/product/foto.png`}
+                  className={`size-[400px] rounded-t-[20px] object-cover`}
+                  src={`/product/frozen.jpg`}
                   width={400}
                   height={400}
                 />
@@ -104,9 +104,9 @@ const Products = ({ className }: ProductPageProps) => {
                 className={`flex aspect-square overflow-hidden object-cover `}
               >
                 <Image
-                  className={`size-[400px] rounded-[20px] `}
+                  className={`size-[400px] rounded-t-[20px] `}
                   alt=""
-                  src={`/sambal.jpeg`}
+                  src={`/product/sambal-serbaguna.jpg`}
                   width={400}
                   height={400}
                 />

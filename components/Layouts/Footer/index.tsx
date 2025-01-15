@@ -20,16 +20,13 @@ export default function Footer() {
             <p
               className={`text-base md:text-2xl font-heavitas text-text-themed leading-4 md:leading-8`}
             >
-              Want to join <br />
+              Let&apos;s Be
+              <br />
               <span className={`text-xl md:text-5xl leading-6 md:leading-10`}>
-                partnership?
+                Partner!
               </span>
             </p>
-            <p
-              className={`mt-4 text-[10px] text-text-themed font-lato font-bold`}
-            >
-              Click here for further information
-            </p>
+
             <div
               onClick={() => {
                 console.log("hello");
@@ -39,7 +36,7 @@ export default function Footer() {
               <div
                 className={`flex text-center w-full justify-center items-center text-sm md:text-xl gap-5 `}
               >
-                Infor Partnership
+                Resellers are welcome
               </div>
 
               <div
@@ -86,15 +83,24 @@ export default function Footer() {
             width={4096}
             height={2920}
           />
-          <p className={`text-text-themed font-barlow mt-4`}>
-            Bagoplek: Plekin aja!
-            <br />
-            BAKSO GORENG AYAM • HALAL
-          </p>
+          <div className="flex items-center gap-4">
+            <p className={`text-text-themed font-barlow mt-4`}>
+              Bagoplek: Plekin aja!
+              <br />
+              BAKSO GORENG AYAM
+            </p>
+            <Image
+              alt=""
+              className="w-8"
+              src="/halal.png"
+              width={1000}
+              height={1000}
+            />
+          </div>
         </div>
         <div className={`md:ml-28 `}>
           <div className={`flex flex-col gap-8 md:gap-20 md:flex-row`}>
-            <div className={`flex flex-col `}>
+            {/* <div className={`flex flex-col `}>
               <div className={`font-bold`}>{`Menu`.toUpperCase()}</div>
               <div className={`mt-6 flex flex-col gap-4`}>
                 <Link
@@ -116,7 +122,7 @@ export default function Footer() {
                   FAQ
                 </Link>
               </div>
-            </div>
+            </div> */}
             <div className={`flex flex-col `}>
               <div className={`font-bold`}>GET IN TOUCH</div>
               <div className={`mt-6 flex flex-col gap-4`}>

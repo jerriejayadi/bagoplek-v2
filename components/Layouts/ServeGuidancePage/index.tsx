@@ -47,15 +47,12 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
               <div
                 className={`text-left font-heavitas text-2xl  md:text-4xl leading-normal tracking-wider sm:leading-loose text-text-themed`}
               >
-                SERVE &amp; STORED{" "}
+                SERVING &amp; STORING{" "}
                 <span className={`text-3xl md:text-5xl text-primaryOrange`}>
                   GUIDANCE
                 </span>
               </div>
-              <div className={`text-text-themed text-lg md:text-lg `}>
-                Lorem ipsum dolor sit amet consectetur. Porttitor at habitant id
-                viverra. Ut laoreet sagittis at aliquet velit pretium non sed.
-              </div>
+
               <div
                 className={`grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-24 `}
               >
@@ -99,7 +96,7 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
                   }
                   desc={
                     <>
-                      Set air fryer sampai 200 C, lalu masukan Bagoplek selama
+                      Atur air fryer sampai 200 C, lalu masukan Bagoplek selama
                       8-9 menit hingga garing.
                     </>
                   }

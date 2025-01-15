@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function ProductPage() {
   return (
-    <>
+    <div className="-mt-28">
       <Products />
       <div className={`p-6 md:p-0 md:pl-16`}>
         <ServeGuidancePage />
@@ -14,6 +14,6 @@ export default function ProductPage() {
       {/* <div>
         <Newsletter/>
       </div> */}
-    </>
+    </div>
   );
 }

@@ -18,7 +18,7 @@ export const LOCATION_LIST = [
     phone: "+62-895-1539-9007",
     city: "Malang",
     googleMapsURL: "https://maps.app.goo.gl/FNsMmEA8oZf18TUb7",
-    locationImage: "",
+    locationImage: "/location/OroOroDowo.JPG",
     embedUrl:
       "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15805.174545231725!2d112.6280407!3d-7.9685754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd629752adc2215%3A0x3da67ad2720f10f5!2sBagoplek%20-%20pasar%20oro%20oro%20dowo!5e0!3m2!1sen!2sid!4v1730083351915!5m2!1sen!2sid&zoom=20",
   },
@@ -28,7 +28,7 @@ export const LOCATION_LIST = [
     phone: "+62-895-1539-9006",
     city: "Malang",
     googleMapsURL: "https://maps.app.goo.gl/7GmBFNU3JNvGBizL8",
-    locationImage: "",
+    locationImage: "/location/Sutami2.JPG",
     embedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3444649982657!2d112.61117370876815!3d-7.963308392028366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78832847b508af%3A0x795aa2530d95767d!2sSuperindo%20Bendungan%20Sutami%20Malang!5e0!3m2!1sen!2sid!4v1730083453129!5m2!1sen!2sid&zoom=20",
   },
@@ -48,7 +48,7 @@ export const LOCATION_LIST = [
     phone: "+62-895-1539-9006",
     city: "Malang",
     googleMapsURL: "https://maps.app.goo.gl/9PoUcpp1tUD8fkHL7",
-    locationImage: "",
+    locationImage: "/location/LaiLai.JPG",
     embedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3259198495343!2d112.60190820876824!3d-7.965230492026447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788352d754fd11%3A0x36471d5010ee3e6b!2sBagoplek%20-%20Lai%20Lai%20Express!5e0!3m2!1sen!2sid!4v1730086007844!5m2!1sen!2sid&zoom=20",
   },
@@ -58,7 +58,7 @@ export const LOCATION_LIST = [
     phone: "+62-852-9878-2570",
     city: "Surabaya",
     googleMapsURL: "https://maps.app.goo.gl/AeKfjcKNzSH2zgvW9",
-    locationImage: "",
+    locationImage: "/location/Surabaya.JPG",
     embedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.693872285857!2d112.64301600875821!3d-7.275632192701154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fdbf66b10c83%3A0xa1f01db494e731b2!2sBagoplek%20-%20Citraland!5e0!3m2!1sen!2sid!4v1730086047860!5m2!1sen!2sid&zoom=20",
   },

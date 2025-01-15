@@ -236,15 +236,15 @@ const Navbar = () => {
         onClick={() => {
           window.open(`https://wa.me/+6281234567890`, "_blank");
         }}
-        className={`fixed bottom-4 md:bottom-10 right-4 md:right-10 rounded-[100%] z-40 p-3 md:p-4 bg-white hover:cursor-pointer`}
+        className={`fixed bottom-6  md:bottom-10 right-4 md:right-10 rounded-full z-40 p-3 md:py-3 md:px-4 bg-[#60D669] hover:cursor-pointer flex  items-center justify-center gap-2 text-center text-base text-white hover:bg-[#4EBF55] active:bg-[#3EA846]`}
       >
         <svg
-          width="67"
-          height="68"
+          width="40"
+          height="40"
           viewBox="0 0 67 68"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className={`size-14 md:size-20 text-black`}
+          className={`size-7 md:size-10 text-black shrink-0`}
         >
           <g clipPath="url(#clip0_2986_1852)">
             <path
@@ -267,6 +267,7 @@ const Navbar = () => {
             </clipPath>
           </defs>
         </svg>
+        <p className="font-bold ">Hubungi Kami</p>
       </div>
     </>
   );

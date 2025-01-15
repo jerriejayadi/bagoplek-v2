@@ -1,4 +1,5 @@
 "use client";
+import Newsletter from "@/components/Layouts/NewsLetter/page";
 import {
   Carousel,
   CarouselContent,
@@ -15,7 +16,7 @@ export default function Home() {
       <Image
         className={`md:-mt-28`}
         alt={``}
-        src={`/images/landing-page.jpeg`}
+        src={`/images/landing-page-2.jpg`}
         width={2000}
         height={2000}
       />
@@ -132,16 +133,17 @@ export default function Home() {
       </div>
       <div className={``}>
         <h1
-          className={`m-7 text-base md:m-14 md:text-[40px] text-text-themed font-heavitas md:leading-[60px]`}
+          className={`m-7 text-base md:m-14 md:text-[40px] text-text-themed font-heavitas md:leading-[96px] text-center`}
         >
           SAVOR THE FLAVOUR <br />
+          IN{" "}
           <span className={`text-primaryOrange text-xl md:text-[52px]`}>
-            EVERYDAY
+            EVERY BITE
           </span>{" "}
-          WITH{" "}
+          {/* WITH{" "}
           <span className={`text-primaryOrange text-xl md:text-[52px]`}>
             BAGOPLEK
-          </span>
+          </span> */}
         </h1>
         <div className="overflow-hidden whitespace-nowrap ">
           <div className="flex animate-marquee min-h-[200px]">
@@ -192,11 +194,81 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div></div>
+      <div>
+        <Newsletter />
+      </div>
       {/* <LandingPage className="px-8 md:px-16 py-7" /> */}
       {/* <VideoPage className="px-8 md:px-16 " />
       <ProductPage className="px-8 md:px-16 " />
+      
       <ServeGuidancePage className="px-8 md:px-16 " /> */}
+      <div className={`w-full relative`}>
+        <Image
+          className={`w-full h-[600px] md:h-[800px] shrink-0 object-cover md:object-fill `}
+          alt=""
+          src="/footer/Bagoplek.png"
+          width={1920}
+          height={1080}
+        />
+        <div
+          className={`flex w-full flex-col items-start justify-between absolute top-0 px-10 py-16 md:px-40 md:py-44  md:flex-row`}
+        >
+          <div className="w-full">
+            <p
+              className={`text-base md:text-2xl font-heavitas text-text-themed leading-4 md:leading-8`}
+            >
+              Let&apos;s Be
+              <br />
+              <span className={`text-xl md:text-5xl leading-6 md:leading-10`}>
+                Partner!
+              </span>
+            </p>
+
+            <div
+              onClick={() => {
+                console.log("hello");
+              }}
+              className={`mt-4 bg-primaryOrange hover:bg-opacity-80 text-white w-full md:max-w-[450px]  hover:cursor-pointer flex items-center gap-2 justify-between transition-all duration-150 rounded-[10px] md:rounded-[20px] `}
+            >
+              <div
+                className={`flex text-center w-full justify-center items-center text-sm md:text-xl gap-5 `}
+              >
+                Resellers are welcome
+              </div>
+
+              <div
+                className={`h-full bg-white p-3 text-primary rounded-r-[10px] md:rounded-r-[20px]`}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  className={` text-[#FFDA48] size-6 md:size-10`}
+                >
+                  <path
+                    fill="currentColor"
+                    className={`text-[#FFDA48]`}
+                    d="M9.31 6.71a.996.996 0 0 0 0 1.41L13.19 12l-3.88 3.88a.996.996 0 1 0 1.41 1.41l4.59-4.59a.996.996 0 0 0 0-1.41L10.72 6.7c-.38-.38-1.02-.38-1.41.01"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className={`mt-20 md:mt-0 w-full flex items-center justify-center`}
+          >
+            <Image
+              className={`w-[200px] md:w-[500px]`}
+              alt=""
+              src="/footer/Bakso.png"
+              width={1000}
+              height={1000}
+            />
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
