@@ -202,7 +202,7 @@ export default function Home() {
       <ProductPage className="px-8 md:px-16 " />
       
       <ServeGuidancePage className="px-8 md:px-16 " /> */}
-      <div className={`w-full relative`}>
+      <div className={`w-full relative -mt-2`}>
         <Image
           className={`w-full h-[600px] md:h-[800px] shrink-0 object-cover md:object-fill `}
           alt=""
@@ -213,7 +213,7 @@ export default function Home() {
         <div
           className={`flex w-full flex-col items-start justify-between absolute top-0 px-10 py-16 md:px-40 md:py-44  md:flex-row`}
         >
-          <div className="w-full">
+          <div className="w-full ">
             <p
               className={`text-base md:text-2xl font-heavitas text-text-themed leading-4 md:leading-8`}
             >

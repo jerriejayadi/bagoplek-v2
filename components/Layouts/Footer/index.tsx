@@ -213,7 +213,7 @@ export default function Footer() {
             </div>
             <div>
               <h1 className={`font-bold`}>{`Online Stores`.toUpperCase()}</h1>
-              <div className={`flex flex-wrap items-center mt-4`}>
+              <div className={`flex flex-wrap items-center mt- gap-4`}>
                 <Link href="https://tokopedia.link/svaZXbIQGNb" target="_blank">
                   <Image
                     className={`w-36 object-contain `}

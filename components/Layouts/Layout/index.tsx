@@ -19,7 +19,7 @@ export default function BaseLayout({
   return (
     <>
       <Navbar />
-      <main className={`py-0 md:py-28  `}>
+      <main className={`py-0 md:pt-28 `}>
         {children}
         <Footer />
       </main>
