@@ -156,12 +156,12 @@ export default function FAQ() {
   return (
     <main className={`flex flex-col relative items-center w-full`}>
       <div
-        className={` flex flex-col  items-center justify-center h-[780px] -mt-64 `}
+        className={` flex flex-col  items-center justify-center h-[850px] -mt-64 `}
       >
         <Image
           alt={``}
-          className={`absolute -top-64 w-[1369px] h-[780px] rounded-2xl md:rounded-b-[120px] object-cover shrink-0`}
-          src={`/thumbnail.jpeg`}
+          className={`absolute -top-64 w-[1369px] h-[850px] rounded-2xl md:rounded-b-[120px] object-cover shrink-0`}
+          src={`/FAQ.jpeg`}
           width={1920}
           height={780}
         />
