@@ -161,7 +161,7 @@ export default function FAQ() {
         <Image
           alt={``}
           className={`absolute -top-64 w-[1369px] h-[850px] rounded-2xl md:rounded-b-[120px] object-cover shrink-0`}
-          src={`/FAQ.jpeg`}
+          src={`/FAQ.jpg`}
           width={1920}
           height={780}
         />
