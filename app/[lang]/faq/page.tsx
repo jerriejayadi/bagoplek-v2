@@ -163,7 +163,7 @@ export default function FAQ() {
           className={`absolute -top-64 w-[1369px] h-[850px] rounded-2xl md:rounded-b-[120px] object-cover shrink-0`}
           src={`/FAQ.jpg`}
           width={1920}
-          height={780}
+          height={1080}
         />
         <div
           className={` px-4 flex flex-col items-center justify-start tracking-wider z-30 absolute top-0`}
