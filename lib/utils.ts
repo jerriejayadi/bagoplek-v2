@@ -1,7 +1,17 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-export const LOCATION_LIST = [
+export interface LocationProps {
+  title: string;
+  address: string;
+  phone: string;
+  city: string;
+  googleMapsURL: string;
+  locationImage: string;
+  embedUrl: string;
+}
+
+export const LOCATION_LIST: LocationProps[] = [
   {
     title: "Bagoplek Office",
     address: "Jl. Mojo No.11b, Bareng, Malang",
@@ -97,8 +107,8 @@ export function convertEmbeddedToDirectMapURL(embedUrl: string) {
 }
 
 export const HERO_BANNER_LIST = [
-  '/images/hero/hero_banner_1.jpg',
-  '/images/hero/hero_banner_2.jpg',
-  '/images/hero/hero_banner_3.jpg',
-  '/images/hero/hero_banner_4.jpg',
-]
+  "/images/hero/hero_banner_1.jpg",
+  "/images/hero/hero_banner_2.jpg",
+  "/images/hero/hero_banner_3.jpg",
+  "/images/hero/hero_banner_4.jpg",
+];
