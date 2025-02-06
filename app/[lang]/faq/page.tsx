@@ -42,7 +42,7 @@ const FAQ_LIST = [
   {
     id: "5",
     question: "Apakah Bagoplek menerima pesanan untuk restoran?",
-    category: "Restoran",
+    category: "Reseller",
     answer:
       "Ya, kami menyediakan bakso goreng dalam jumlah besar khusus untuk restoran yang ingin menjual menu bakso goreng Bagoplek di tempat mereka.",
   },
@@ -50,14 +50,14 @@ const FAQ_LIST = [
     id: "6",
     question:
       "Bagaimana cara restoran dapat memesan bakso goreng dari Bagoplek?",
-    category: "Restoran",
+    category: "Reseller",
     answer:
-      "Restoran dapat menghubungi tim sales kami melalui kontak di website untuk mendiskusikan kebutuhan dan jumlah pesanan sesuai dengan kebutuhan bisnis Anda.",
+      "Reseller dapat menghubungi tim sales kami melalui kontak di website untuk mendiskusikan kebutuhan dan jumlah pesanan sesuai dengan kebutuhan bisnis Anda.",
   },
   {
     id: "7",
     question: "Apakah ada minimum order untuk restoran?",
-    category: "Restoran",
+    category: "Reseller",
     answer:
       "Ya, untuk memenuhi kebutuhan suplai, kami menetapkan minimum order khusus bagi pemesanan restoran. Hubungi kami untuk detail lebih lanjut.",
   },
@@ -65,7 +65,7 @@ const FAQ_LIST = [
     id: "8",
     question:
       "Apakah Bagoplek memberikan diskon untuk pemesanan dalam jumlah besar bagi restoran?",
-    category: "Restoran",
+    category: "Reseller",
     answer:
       "Kami memberikan penawaran khusus dan diskon berdasarkan jumlah pesanan bulanan. Untuk informasi harga khusus, silakan hubungi tim kami.",
   },
