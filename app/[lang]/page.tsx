@@ -1,11 +1,13 @@
 "use client";
 import Newsletter from "@/components/Layouts/NewsLetter/page";
+import { AutoSlideCarousel } from "@/components/Organism/AutoSlideCarousel";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { LOCATION_LIST } from "@/lib/utils";
+import { HERO_BANNER_LIST, LOCATION_LIST } from "@/lib/utils";
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -13,13 +15,48 @@ export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   return (
     <main className="flex min-h-screen flex-col justify-between ">
-      <Image
+      {/* <Image
         className={`md:-mt-28`}
         alt={``}
         src={`/images/landing-page-2.jpg`}
         width={2000}
         height={2000}
-      />
+      /> */}
+      {/* <Carousel
+        plugins={[
+          Autoplay({
+            delay: 3000,
+            playOnInit: true,
+            active: true,
+            stopOnLastSnap: false,
+            stopOnInteraction: false,
+          }),
+        ]}
+        className="md:-mt-28 md:h-screen"
+      >
+        <CarouselContent className="md:h-screen md:object-contain">
+          {HERO_BANNER_LIST.map((rows, index) => (
+            <CarouselItem key={`hero-banner-${index}`} className="md:h-screen">
+              <Image
+                className={`h-full`}
+                alt={``}
+                src={rows}
+                width={2000}
+                height={2000}
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <div className="bottom-0 absolute w-fit right-0 left-0 mx-auto flex">
+          {HERO_BANNER_LIST.map((rows, index) => (
+            <div
+              key={`banner-count-${index}`}
+              className="size-10 bg-white rounded-[100%]"
+            />
+          ))}
+        </div>
+      </Carousel> */}
+      <AutoSlideCarousel />
       <div className={`bg-[#FFFDF3]`}>
         <div
           className={`mt-6 md:mt-20 flex flex-col items-center justify-center`}
@@ -70,9 +107,9 @@ export default function Home() {
                   align: "center",
                 }}
                 orientation="vertical"
-                className=" md:w-full max-w-xs"
+                className=" md:w-full max-w-xs overflow-hidden"
               >
-                <CarouselContent className="-mt-1 md:h-[500px] h-[284px] ">
+                <CarouselContent className="-mt-1 md:h-[500px] h-[284px] md:overflow-y-scroll md:overflow-smooth">
                   {LOCATION_LIST.map((rows, index) => (
                     <CarouselItem
                       onClick={() => {}}
@@ -194,7 +231,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div>
+      <div className="my-20">
         <Newsletter />
       </div>
       {/* <LandingPage className="px-8 md:px-16 py-7" /> */}
