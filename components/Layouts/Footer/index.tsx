@@ -77,13 +77,13 @@ export default function Footer() {
       >
         <div className={`flex flex-col md:w-96`}>
           <Image
-            className={`w-28`}
+            className={`w-40`}
             alt={``}
             src={`/logo-bagoplek.png`}
             width={4096}
             height={2920}
           />
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col gap-4">
             <p className={`text-text-themed font-barlow mt-4`}>
               Bagoplek: Plekin aja!
               <br />
@@ -91,8 +91,8 @@ export default function Footer() {
             </p>
             <Image
               alt=""
-              className="w-8"
-              src="/halal.png"
+              className="w-28"
+              src="/LS_UNGU.png"
               width={1000}
               height={1000}
             />
@@ -175,7 +175,7 @@ export default function Footer() {
                     className="hover:text-primaryOrange"
                     href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.2128044666783!2d112.6143422!3d-7.9769442999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883539578065f%3A0x3254e7f3f1e4831e!2sBagoplek%20-%20Office%20(Central%20Kitchen)!5e0!3m2!1sen!2sid!4v1728703675911!5m2!1sen!2sid&zoom=20"
                   >
-                    Jl. Mojo No.11b Malang
+                    Jl. Mojo No.11B Malang
                   </Link>
                 </div>
               </div>

@@ -236,7 +236,7 @@ const Navbar = () => {
         onClick={() => {
           window.open(`https://wa.me/+6281234567890`, "_blank");
         }}
-        className={`fixed bottom-6  md:bottom-10 right-4 md:right-10 rounded-full z-40 p-3 md:py-3 md:px-4 bg-[#60D669] hover:cursor-pointer flex  items-center justify-center gap-2 text-center text-base text-white hover:bg-[#4EBF55] active:bg-[#3EA846]`}
+        className={`fixed bottom-6  md:bottom-10 right-4 md:right-10 rounded-[100%] z-40 p-3 md:py-3 md:px-4 bg-[#60D669] hover:cursor-pointer flex  items-center justify-center gap-2 text-center text-base text-white hover:bg-[#4EBF55] active:bg-[#3EA846]`}
       >
         <svg
           width="40"
@@ -267,7 +267,7 @@ const Navbar = () => {
             </clipPath>
           </defs>
         </svg>
-        <p className="font-bold ">Hubungi Kami</p>
+        {/* <p className="font-bold ">Hubungi Kami</p> */}
       </div>
     </>
   );
