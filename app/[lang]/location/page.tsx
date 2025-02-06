@@ -20,6 +20,8 @@ export default function Location() {
     groupedLocations[location.city].push(location);
   });
 
+  const scaledImages = ["/location/Sutami3.JPG"];
+
   return (
     <>
       {/* <Image
@@ -61,18 +63,24 @@ export default function Location() {
                       href={convertEmbeddedToDirectMapURL(rows.embedUrl)}
                       target="_blank"
                       key={`location-${index}`}
-                      className={`flex flex-col flex-grow h-full bg-white rounded-sm md:rounded-3xl shadow-xl hover:shadow-primaryOrange/10 transition-all duration-300 hover:cursor-pointer `}
+                      className={`flex flex-col overflow-hidden flex-grow h-full bg-white rounded-sm md:rounded-3xl shadow-xl hover:shadow-primaryOrange/10 transition-all duration-300 hover:cursor-pointer `}
                     >
-                      <Image
-                        className={`aspect-video md:h-72 object-cover rounded-sm md:rounded-t-3xl`}
-                        alt={``}
-                        src={
-                          rows.locationImage ||
-                          `/images/partnership/partnership-1.jpeg`
-                        }
-                        width={1000}
-                        height={1000}
-                      />
+                      <div className="h-72 w-full overflow-hidden object-cover object-center">
+                        <Image
+                          className={`md:h-72 object-cover  object-center rounded-sm md:rounded-t-3xl ${
+                            scaledImages.some(
+                              (images) => images === rows.locationImage
+                            ) && "object-[25%_65%]"
+                          }`}
+                          alt={``}
+                          src={
+                            rows.locationImage ||
+                            `/images/partnership/partnership-1.jpeg`
+                          }
+                          width={1000}
+                          height={1000}
+                        />
+                      </div>
                       <div
                         className={`px-2 py-4 md:p-6 text-center text-text-themed flex-grow  flex flex-col justify-between items-center`}
                       >

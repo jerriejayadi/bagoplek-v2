@@ -13,6 +13,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const scaledImages = ["/location/Sutami3.JPG"];
   return (
     <main className="flex min-h-screen flex-col justify-between ">
       {/* <Image
@@ -127,7 +128,11 @@ export default function Home() {
                           }  transition-all duration-300 `}
                         >
                           <Image
-                            className={`h-20 md:h-40 object-cover rounded-sm md:rounded-t-3xl`}
+                            className={`h-20 md:h-40 object-cover rounded-sm md:rounded-t-3xl ${
+                              scaledImages.some(
+                                (images) => images === rows.locationImage
+                              ) && "object-[25%_50%]"
+                            }`}
                             alt={``}
                             src={
                               rows.locationImage ||

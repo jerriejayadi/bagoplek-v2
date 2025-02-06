@@ -14,7 +14,7 @@ export interface LocationProps {
 export const LOCATION_LIST: LocationProps[] = [
   {
     title: "Bagoplek Office",
-    address: "Jl. Mojo No.11b, Bareng, Malang",
+    address: "Jl. Mojo No.11B, Bareng, Malang",
     phone: "+62-895-1539-9006",
     city: "Malang",
     googleMapsURL: "https://maps.app.goo.gl/gCkSrh58QtXe5JgL9",
@@ -38,7 +38,7 @@ export const LOCATION_LIST: LocationProps[] = [
     phone: "+62-895-1539-9006",
     city: "Malang",
     googleMapsURL: "https://maps.app.goo.gl/7GmBFNU3JNvGBizL8",
-    locationImage: "/location/Sutami2.JPG",
+    locationImage: "/location/Sutami3.JPG",
     embedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3444649982657!2d112.61117370876815!3d-7.963308392028366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78832847b508af%3A0x795aa2530d95767d!2sSuperindo%20Bendungan%20Sutami%20Malang!5e0!3m2!1sen!2sid!4v1730083453129!5m2!1sen!2sid&zoom=20",
   },
