@@ -24,8 +24,8 @@ export default function Newsletter() {
           className={`absolute top-0 w-full h-full flex flex-col items-center justify-center z-30`}
         >
           <div className={`md:w-[458px] p-6`}>
-            <p className={`font-heavitas text-white text-2xl`}>
-              Want to <span className={`text-4xl`}>order & Further info?</span>
+            <p className={`font-heavitas text-white md:text-2xl`}>
+              Want to <span className={`text-xl md:text-4xl`}>order & Further info?</span>
             </p>
             <p className={`text-white my-4`}>Hubungi kami melalui Whatsapp</p>
 

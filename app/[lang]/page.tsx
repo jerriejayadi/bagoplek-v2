@@ -1,6 +1,7 @@
 "use client";
 import Newsletter from "@/components/Layouts/NewsLetter/page";
 import { AutoSlideCarousel } from "@/components/Organism/AutoSlideCarousel";
+import ProductCard from "@/components/Organism/ProductCard";
 import {
   Carousel,
   CarouselContent,
@@ -9,11 +10,41 @@ import {
 import { HERO_BANNER_LIST, LOCATION_LIST } from "@/lib/utils";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useRef, useState } from "react";
 
 export default function Home() {
+  const router = useRouter();
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const scaledImages = ["/location/Sutami3.JPG"];
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startY, setStartY] = useState(0);
+  const [scrollTop, setScrollTop] = useState(0);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!scrollRef.current) return;
+
+    setIsDragging(true);
+    setStartY(e.pageY - scrollRef.current.offsetTop);
+    setScrollTop(scrollRef.current.scrollTop);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    const y = e.pageY - scrollRef.current.offsetTop;
+    const scrollDistance = y - startY;
+    scrollRef.current.scrollTop = scrollTop - scrollDistance;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const navigateToProduct = () => {
+    router.push(`/products`);
+  };
+
   return (
     <main className="flex min-h-screen flex-col justify-between ">
       {/* <Image
@@ -78,11 +109,9 @@ export default function Home() {
             We are Spreading Around East Java
           </p>
         </div>
-        <div
-          className={`relative w-full h-full md:h-screen flex gap-4 md:block p-4`}
-        >
+        <div className={`relative  h-full md:h-screen flex gap-4 md:block p-4`}>
           <div
-            className={`w-full mt-3 hidden md:flex absolute top-0 bg-gradient-to-l from-black/50 to-black/0 to-100% md:to-50% h-full overflow-hidden pointer-events-none z-10`}
+            className={`w-full mt-3 hidden md:flex absolute right-0 top-0 bg-gradient-to-l from-black/50 to-black/0 to-100% md:to-50% h-full overflow-hidden pointer-events-none z-10`}
           />
           <iframe
             className={`w-[50%] md:w-full h-[284px] md:h-screen  z-0`}
@@ -103,14 +132,74 @@ export default function Home() {
                 Our <br />{" "}
                 <span className={`text-base md:text-4xl`}>Location</span>
               </p>
-              <Carousel
+              <div
+                ref={scrollRef}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseUp}
+                className="flex flex-col overflow-y-scroll max-w-xs h-[284px] md:h-[500px]"
+              >
+                <div className="p-1 flex flex-col gap-4">
+                  {LOCATION_LIST.map((rows, index) => (
+                    <div
+                      key={`location-index`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedIndex(index);
+                      }}
+                      onMouseDown={(e) => e.stopPropagation()} // Allow dragging while clicking the card
+                      onMouseUp={(e) => e.stopPropagation()} // Prevent cursor getting stuck
+                      className={`flex flex-col bg-[#F5DD7D] rounded-sm md:rounded-3xl ${
+                        selectedIndex === index &&
+                        "border-2 border-yellow-300 shadow-yellow-500 shadow-md"
+                      }  transition-all duration-300 `}
+                    >
+                      <Image
+                        className={`h-20 md:h-40 object-cover rounded-sm md:rounded-t-3xl ${
+                          scaledImages.some(
+                            (images) => images === rows.locationImage
+                          ) && "object-[25%_50%]"
+                        }`}
+                        alt={``}
+                        src={
+                          rows.locationImage ||
+                          `/images/partnership/partnership-1.jpeg`
+                        }
+                        width={1000}
+                        height={220}
+                      />
+                      <div
+                        className={`p-1 md:p-6 text-center text-text-themed`}
+                      >
+                        <h1
+                          className={`text-xs md:text-2xl font-heavitas text-primaryOrange`}
+                        >
+                          {rows.title}
+                        </h1>
+                        <p
+                          className={`text-[10px] md:text-base font-barlow font-medium`}
+                        >
+                          {rows.address}
+                        </p>
+                        <p
+                          className={`text-[10px] md:text-base font-barlow font-medium`}
+                        >
+                          {rows.phone}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* <Carousel
                 opts={{
                   align: "center",
                 }}
                 orientation="vertical"
                 className=" md:w-full max-w-xs overflow-hidden"
               >
-                <CarouselContent className="-mt-1 md:h-[500px] h-[284px] md:overflow-y-scroll md:overflow-smooth">
+                <CarouselContent className="-mt-1 md:h-[500px] h-[284px] ">
                   {LOCATION_LIST.map((rows, index) => (
                     <CarouselItem
                       onClick={() => {}}
@@ -148,9 +237,6 @@ export default function Home() {
                               className={`text-xs md:text-2xl font-heavitas text-primaryOrange`}
                             >
                               {rows.title}
-                              {/* <span className={`text-primaryOrange`}>
-                                Citraland Surabaya
-                              </span> */}
                             </h1>
                             <p
                               className={`text-[10px] md:text-base font-barlow font-medium`}
@@ -168,14 +254,14 @@ export default function Home() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-              </Carousel>
+              </Carousel> */}
             </div>
           </div>
         </div>
       </div>
-      <div className={``}>
+      <div className={`pb-20 px-4`}>
         <h1
-          className={`m-7 text-base md:m-14 md:text-[40px] text-text-themed font-heavitas md:leading-[96px] text-center`}
+          className={`text-base md:m-14 md:text-[40px] text-text-themed font-heavitas md:leading-[96px] text-center`}
         >
           SAVOR THE FLAVOUR <br />
           IN{" "}
@@ -187,7 +273,7 @@ export default function Home() {
             BAGOPLEK
           </span> */}
         </h1>
-        <div className="overflow-hidden whitespace-nowrap ">
+        {/* <div className="overflow-hidden whitespace-nowrap ">
           <div className="flex animate-marquee min-h-[200px]">
             <Image
               src="/images/slide-image/image-1.jpeg"
@@ -211,7 +297,6 @@ export default function Home() {
               height={1000}
             />
 
-            {/* Repeat the images to ensure continuous sliding */}
             <Image
               src="/images/slide-image/image-1.jpeg"
               alt="Image 1"
@@ -234,17 +319,37 @@ export default function Home() {
               height={1000}
             />
           </div>
+        </div> */}
+        <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
+          <ProductCard
+            onClick={navigateToProduct}
+            name="Bagoplek Ready To Eat"
+            image_src="/product/ready-to-eat.jpg"
+            className="hover:cursor-pointer"
+          />
+          <ProductCard
+            onClick={navigateToProduct}
+            name="Bagoplek Frozen"
+            image_src="/product/frozen.jpg"
+            className="hover:cursor-pointer"
+          />
+          <ProductCard
+            onClick={navigateToProduct}
+            name="Sambal Serbaguna"
+            image_src="/product/sambal-serbaguna.jpg"
+            className="hover:cursor-pointer"
+          />
         </div>
       </div>
-      <div className="my-20">
+      {/* <div className="my-20">
         <Newsletter />
-      </div>
+      </div> */}
       {/* <LandingPage className="px-8 md:px-16 py-7" /> */}
       {/* <VideoPage className="px-8 md:px-16 " />
       <ProductPage className="px-8 md:px-16 " />
       
       <ServeGuidancePage className="px-8 md:px-16 " /> */}
-      <div className={`w-full relative -mt-2`}>
+      {/* <div className={`w-full relative -mt-2`}>
         <Image
           className={`w-full h-[600px] md:h-[800px] shrink-0 object-cover md:object-fill `}
           alt=""
@@ -310,7 +415,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }

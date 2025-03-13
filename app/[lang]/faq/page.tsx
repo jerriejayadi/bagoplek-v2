@@ -245,7 +245,7 @@ export default function FAQ() {
           Join Now
         </Link>
       </div> */}
-      <Newsletter />
+      {/* <Newsletter /> */}
     </main>
   );
 }

@@ -50,7 +50,14 @@ export default function Location() {
               <h1 className="mb-4 font-heavitas text-text-themed text-2xl md:text-4xl text-center md:text-left">
                 {city}
               </h1>
-              <div className={`grid md:grid-cols-3 gap-x-6 gap-y-6 md:gap-y-6`}>
+              <div
+                className={`grid md:grid-cols-3 gap-x-6 gap-y-6 md:gap-y-6 ${
+                  Object.keys(groupedLocations).filter((rows) => rows === city)
+                    .length > 3
+                    ? "md:grid-cols-1"
+                    : "md:grid-cols-"
+                }`}
+              >
                 {cityLocations.map((rows, index) => (
                   <div
                     className="flex flex-col items-center"

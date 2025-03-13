@@ -122,12 +122,12 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
               className={`w-[40%]  items-center justify-center relative hidden sm:flex`}
             >
               <div
-                className={` w-full max-w-[413px] h-[600px] bg-gradient-to-br from-[#FCD848] to-[#FCE06E] rounded-tl-[233.14px] rounded-tr-[233.14px] rounded-bl-[93.26px] flex-grow-0`}
+                className={` relative w-full max-w-[413px] overflow-hidden h-[600px] bg-gradient-to-br from-[#FCD848] to-[#FCE06E] rounded-tl-[233.14px] rounded-tr-[233.14px] rounded-bl-[93.26px] flex-grow-0`}
               >
                 <Image
-                  className={`absolute right-0`}
+                  className={`absolute right-0 top-2 scale-x-[-1] w-[1000px]`}
                   alt={""}
-                  src={`/serve-guidance/hands-bagoplek.png`}
+                  src={`/serve-guidance/DSC02819.png`}
                   width={434}
                   height={434}
                 />

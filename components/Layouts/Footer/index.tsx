@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import router from "next/navigation";
+import Newsletter from "../NewsLetter/page";
 export default function Footer() {
   return (
     <footer className={`w-full`}>
@@ -72,6 +73,7 @@ export default function Footer() {
           </div>
         </div>
       </div> */}
+      <Newsletter/>
       <div
         className={`bg-white flex flex-col gap-6 p-8 md:p-16 text-text-themed md:flex-row -mt-2`}
       >
@@ -91,7 +93,7 @@ export default function Footer() {
             </p>
             <Image
               alt=""
-              className="w-28"
+              className="w-40"
               src="/LS_UNGU.png"
               width={1000}
               height={1000}
@@ -240,6 +242,18 @@ export default function Footer() {
                     className={`w-32 shrink-0  h-auto ml-4`}
                     alt=""
                     src="/grab-food.png"
+                    width={1000}
+                    height={1000}
+                  />
+                </Link>
+                <Link
+                  href="https://r.grab.com/g/6-20241102_101705_7cb015135ee5a451_MEXMPS-6-C4CTBFLAAVJZL6"
+                  target="_blank"
+                >
+                  <Image
+                    className={`w-32 shrink-0  h-auto ml-4`}
+                    alt=""
+                    src="/paxel-logo.svg"
                     width={1000}
                     height={1000}
                   />

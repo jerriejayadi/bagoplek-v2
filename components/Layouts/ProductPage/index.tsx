@@ -1,3 +1,4 @@
+import ProductCard from "@/components/Organism/ProductCard";
 import Image from "next/image";
 
 interface ProductPageProps {
@@ -10,7 +11,7 @@ const Products = ({ className }: ProductPageProps) => {
       <Image
         alt=""
         src={`/images/product/thumbnail-2.jpg`}
-        className={``}
+        className={`mt-28 md:mt-0`}
         width={1920}
         height={1080}
       />
@@ -50,78 +51,18 @@ const Products = ({ className }: ProductPageProps) => {
           <div
             className={`flex items-center justify-center gap-10 flex-col sm:flex-row `}
           >
-            <div
-              className={`flex flex-col items-center  bg-white shadow-xl h-full rounded-[20px]`}
-            >
-              <div className={`flex aspect-square overflow-hidden `}>
-                <Image
-                  alt=""
-                  className={`md:size-[400px] rounded-t-[20px] object-cover`}
-                  src={`/product/ready-to-eat.jpg`}
-                  width={400}
-                  height={400}
-                />
-              </div>
-              <div
-                className={`text-text-themed p-4 md:p-7 text-center font-semibold flex flex-col items-center`}
-              >
-                <div className={`text-2xl`}>
-                  BAGOPLEK <span className={`font-black`}>READY TO EAT</span>
-                </div>
-                <div className={`text-base mt-4 md:mt-6`}>
-                  &bull; Isi 10 Pcs + 1 Sambal
-                </div>
-                <div className={`text-base`}>&bull; Isi 5 Pcs + 1 Sambal</div>
-              </div>
-            </div>
-            <div
-              className={`flex flex-col items-center bg-white shadow-xl h-full rounded-[20px]`}
-            >
-              <div className={`flex aspect-square overflow-hidden `}>
-                <Image
-                  alt=""
-                  className={`size-[400px] rounded-t-[20px] object-cover`}
-                  src={`/product/frozen.jpg`}
-                  width={400}
-                  height={400}
-                />
-              </div>
-              <div
-                className={`text-text-themed text-center font-semibold py-7 flex flex-col items-center`}
-              >
-                <div className={`text-2xl `}>
-                  BAGOPLEK <span className={`font-black`}>FROZEN</span>
-                </div>
-                <div className={`text-base mt-5`}>
-                  &bull; Isi 10 Pcs + 1 Sambal
-                </div>
-              </div>
-            </div>
-            <div
-              className={`flex flex-col items-center bg-white shadow-xl h-full rounded-[20px]`}
-            >
-              <div
-                className={`flex aspect-square overflow-hidden object-cover `}
-              >
-                <Image
-                  className={`size-[400px] rounded-t-[20px] `}
-                  alt=""
-                  src={`/product/sambal-serbaguna.jpg`}
-                  width={400}
-                  height={400}
-                />
-              </div>
-              <div
-                className={`text-text-themed text-center font-semibold my-auto p-4`}
-              >
-                <div className={`text-2xl  `}>
-                  SAMBAL <span className={`font-black`}>SERBAGUNA</span>
-                </div>
-                <div className={`text-base mt-5`}>
-                  &bull; 1 botol berisi 300ml
-                </div>
-              </div>
-            </div>
+            <ProductCard
+              name="Bagoplek Ready To Eat"
+              image_src="/product/ready-to-eat.jpg"
+            />
+            <ProductCard
+              name="Bagoplek Frozen"
+              image_src="/product/frozen.jpg"
+            />
+            <ProductCard
+              name="Sambal Serbaguna"
+              image_src="/product/sambal-serbaguna.jpg"
+            />
           </div>
         </div>
       </div>
