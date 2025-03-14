@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
         </div>
       </div> */}
-      <Newsletter/>
+      <Newsletter />
       <div
         className={`bg-white flex flex-col gap-6 p-8 md:p-16 text-text-themed md:flex-row -mt-2`}
       >
@@ -225,7 +225,10 @@ export default function Footer() {
                     height={1000}
                   />
                 </Link>
-                <Link href="https://id.shp.ee/MxiAsFn" target="_blank">
+                <Link
+                  href="https://www.tokopedia.com/bagoplek-id"
+                  target="_blank"
+                >
                   <Image
                     className={`w-36 object-contain shrink-0  h-auto ml-4`}
                     alt=""
@@ -247,7 +250,8 @@ export default function Footer() {
                   />
                 </Link>
                 <Link
-                  href="https://r.grab.com/g/6-20241102_101705_7cb015135ee5a451_MEXMPS-6-C4CTBFLAAVJZL6"
+                  href="https://wa.me/+6289515399006?text=Halo%2C%20saya%20ingin%20memesan%20Bagoplek%20dengan%20pengiriman%20menggunakan%20Paxel..%21
+"
                   target="_blank"
                 >
                   <Image
