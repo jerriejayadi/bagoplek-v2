@@ -13,9 +13,9 @@ export default function ServeGuidanceStep({
 }: ServeGuidanceStepProps) {
   return (
     <div className={`flex items-center gap-4 md:gap-6`}>
-      <div className={``}>
+      <div className={`shrink-0`}>
         <Image
-          className={`w-36`}
+          className={`md:w-24 shrink-0`}
           alt=""
           src={imageURL}
           width={90}

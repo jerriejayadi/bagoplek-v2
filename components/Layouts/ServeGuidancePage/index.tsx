@@ -57,7 +57,7 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
                 className={`grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-24 `}
               >
                 <ServeGuidanceStep
-                  imageURL={"/serve-guidance/oven.png"}
+                  imageURL={"/serve-guidance/oven-new.png"}
                   title={
                     <>
                       MENGGUNAKAN{" "}
@@ -72,7 +72,7 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
                   }
                 />
                 <ServeGuidanceStep
-                  imageURL={"/serve-guidance/frying-pan (1).png"}
+                  imageURL={"/serve-guidance/frying-pan.png"}
                   title={
                     <>
                       DENGAN CARA{" "}
@@ -87,7 +87,7 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
                   }
                 />
                 <ServeGuidanceStep
-                  imageURL={"/serve-guidance/air-fryer.png"}
+                  imageURL={"/serve-guidance/air-fryer-new.png"}
                   title={
                     <>
                       MENGGUNAKAN{" "}
@@ -102,11 +102,11 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
                   }
                 />
                 <ServeGuidanceStep
-                  imageURL={"/serve-guidance/refrigerator.png"}
+                  imageURL={"/serve-guidance/freezer.png"}
                   title={
                     <>
                       CARA{" "}
-                      <span className={`text-primaryOrange`}>PENYIMPANAN</span>{" "}
+                      <span className={`text-primaryOrange `}>PENYIMPANAN</span>
                     </>
                   }
                   desc={
@@ -116,6 +116,15 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
                     </>
                   }
                 />
+                {/* <div className="w-full flex items-center justify-center">
+                  <Image
+                    alt=""
+                    className="w-24"
+                    src="/serve-guidance/freezer.png"
+                    width={1000}
+                    height={1000}
+                  />
+                </div> */}
               </div>
             </div>
             <div
