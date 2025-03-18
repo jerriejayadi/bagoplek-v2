@@ -45,7 +45,7 @@ export default function Newsletter() {
                   width={1000}
                   height={1000}
                 />
-                Chat 081242424543
+                Chat 0895-1539-9006
               </div>
 
               <div
