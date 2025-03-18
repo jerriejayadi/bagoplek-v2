@@ -42,125 +42,152 @@ export default function Location() {
         </h1>
       </div>
       <div className="p-6 md:p-20 flex flex-col gap-20">
-        {Object.keys(groupedLocations).map((city) => {
-          const cityLocations = groupedLocations[city];
+        {Object.keys(groupedLocations)
+          .filter((rows) => rows === "Malang")
+          .map((city) => {
+            const cityLocations = groupedLocations[city];
 
-          return (
-            <div className="" key={city}>
-              <h1 className="mb-4 font-heavitas text-text-themed text-2xl md:text-4xl text-center md:text-left">
-                {city}
-              </h1>
-              <div
-                className={`grid md:grid-cols-3 gap-x-6 gap-y-6 md:gap-y-6 ${
-                  Object.keys(groupedLocations).filter((rows) => rows === city)
-                    .length > 3
-                    ? "md:grid-cols-1"
-                    : "md:grid-cols-"
-                }`}
-              >
-                {cityLocations.map((rows, index) => (
-                  <div
-                    className="flex flex-col items-center"
-                    key={`outlet-${index}`}
-                  >
-                    {/* <p className="mb-4 font-heavitas text-text-themed text-2xl md:text-4xl">
+            return (
+              <div className="" key={city}>
+                <h1 className="mb-4 font-heavitas text-text-themed text-2xl md:text-4xl text-center md:text-left">
+                  {city}
+                </h1>
+                <div
+                  className={`grid md:grid-cols-3 gap-x-6 gap-y-6 md:gap-y-6 ${
+                    Object.keys(groupedLocations).filter(
+                      (rows) => rows === city
+                    ).length > 3
+                      ? "md:grid-cols-1"
+                      : "md:grid-cols-"
+                  }`}
+                >
+                  {cityLocations.map((rows, index) => (
+                    <div
+                      className="flex flex-col items-center"
+                      key={`outlet-${index}`}
+                    >
+                      {/* <p className="mb-4 font-heavitas text-text-themed text-2xl md:text-4xl">
                       {rows.city}
                     </p> */}
-                    <Link
-                      href={convertEmbeddedToDirectMapURL(rows.embedUrl)}
-                      target="_blank"
-                      key={`location-${index}`}
-                      className={`flex flex-col overflow-hidden flex-grow h-full bg-white rounded-sm md:rounded-3xl shadow-xl hover:shadow-primaryOrange/10 transition-all duration-300 hover:cursor-pointer `}
-                    >
-                      <div className="h-72 w-full overflow-hidden object-cover object-center">
-                        <Image
-                          className={`md:h-72 object-cover  object-center rounded-sm md:rounded-t-3xl ${
-                            scaledImages.some(
-                              (images) => images === rows.locationImage
-                            ) && "object-[25%_65%]"
-                          }`}
-                          alt={``}
-                          src={
-                            rows.locationImage ||
-                            `/images/partnership/partnership-1.jpeg`
-                          }
-                          width={1000}
-                          height={1000}
-                        />
-                      </div>
-                      <div
-                        className={`px-2 py-4 md:p-6 text-center text-text-themed flex-grow  flex flex-col justify-between items-center`}
+                      <Link
+                        href={convertEmbeddedToDirectMapURL(rows.embedUrl)}
+                        target="_blank"
+                        key={`location-${index}`}
+                        className={`flex flex-col overflow-hidden flex-grow h-full bg-white rounded-sm md:rounded-3xl shadow-xl hover:shadow-primaryOrange/10 transition-all duration-300 hover:cursor-pointer `}
                       >
-                        <h1
-                          className={`text-base md:text-2xl font-heavitas text-primaryOrange align-middle `}
-                        >
-                          {rows.title}
-                        </h1>
-                        <div className="mt-4">
-                          <p
-                            className={`text-sm md:text-base font-barlow font-medium`}
-                          >
-                            {rows.address}
-                          </p>
-                          <p
-                            className={`text-sm md:text-base font-barlow font-medium`}
-                          >
-                            {rows.phone}
-                          </p>
+                        <div className="h-72 w-full overflow-hidden object-cover object-center">
+                          <Image
+                            className={`md:h-72 object-cover  object-center rounded-sm md:rounded-t-3xl ${
+                              scaledImages.some(
+                                (images) => images === rows.locationImage
+                              ) && "object-[25%_65%]"
+                            }`}
+                            alt={``}
+                            src={
+                              rows.locationImage ||
+                              `/images/partnership/partnership-1.jpeg`
+                            }
+                            width={1000}
+                            height={1000}
+                          />
                         </div>
-                      </div>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-      {/* <div
-        className={`grid md:grid-cols-3 p-6 md:p-20 gap-x-6 gap-y-6 md:gap-y-40 `}
-      >
-        {LOCATION_LIST.map((rows, index) => (
-          <div className="flex flex-col items-center" key={`outlet-${index}`}>
-            <p className="mb-4 font-heavitas text-text-themed text-2xl md:text-4xl">
-              {rows.city}
-            </p>
-            <Link
-              href={convertEmbeddedToDirectMapURL(rows.embedUrl)}
-              target="_blank"
-              key={`location-${index}`}
-              className={`flex flex-col flex-grow h-full bg-white rounded-sm md:rounded-3xl shadow-xl hover:shadow-primaryOrange/10 transition-all duration-300 hover:cursor-pointer `}
-            >
-              <Image
-                className={`aspect-video md:h-72 object-cover rounded-sm md:rounded-t-3xl`}
-                alt={``}
-                src={
-                  rows.locationImage || `/images/partnership/partnership-1.jpeg`
-                }
-                width={1000}
-                height={1000}
-              />
-              <div
-                className={`px-2 py-4 md:p-6 text-center text-text-themed flex-grow  flex flex-col justify-between items-center`}
-              >
-                <h1
-                  className={`text-base md:text-2xl font-heavitas text-primaryOrange align-middle `}
-                >
-                  {rows.title}
-                </h1>
-                <div className="mt-4">
-                  <p className={`text-sm md:text-base font-barlow font-medium`}>
-                    {rows.address}
-                  </p>
-                  <p className={`text-sm md:text-base font-barlow font-medium`}>
-                    {rows.phone}
-                  </p>
+                        <div
+                          className={`px-2 py-4 md:p-6 text-center text-text-themed flex-grow  flex flex-col justify-between items-center`}
+                        >
+                          <h1
+                            className={`text-base md:text-2xl font-heavitas text-primaryOrange align-middle `}
+                          >
+                            {rows.title}
+                          </h1>
+                          <div className="mt-4">
+                            <p
+                              className={`text-sm md:text-base font-barlow font-medium`}
+                            >
+                              {rows.address}
+                            </p>
+                            <p
+                              className={`text-sm md:text-base font-barlow font-medium`}
+                            >
+                              {rows.phone}
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </Link>
-          </div>
-        ))}
-      </div> */}
+            );
+          })}
+      </div>
+      <div className="p-6 flex flex-col md:flex-row  gap-16 md:p-20">
+        {Object.keys(groupedLocations)
+          .filter((rows) => rows !== "Malang")
+          .map((city) => {
+            const cityLocations = groupedLocations[city];
+
+            return (
+              <div className="basis-1/3 " key={city}>
+                <h1 className="mb-4 font-heavitas text-text-themed text-2xl md:text-4xl text-center md:text-left">
+                  {city}
+                </h1>
+                <div className={`flex flex-grow  gap-x-6 gap-y-6 md:gap-y-6 `}>
+                  {cityLocations.map((rows, index) => (
+                    <div
+                      className="flex flex-col items-center"
+                      key={`outlet-${index}`}
+                    >
+                      <Link
+                        href={convertEmbeddedToDirectMapURL(rows.embedUrl)}
+                        target="_blank"
+                        key={`location-${index}`}
+                        className={`flex flex-col overflow-hidden flex-grow h-full bg-white rounded-sm md:rounded-3xl shadow-xl hover:shadow-primaryOrange/10 transition-all duration-300 hover:cursor-pointer `}
+                      >
+                        <div className="h-72 w-full overflow-hidden object-cover object-center">
+                          <Image
+                            className={`md:h-72 object-cover  object-center rounded-sm md:rounded-t-3xl ${
+                              scaledImages.some(
+                                (images) => images === rows.locationImage
+                              ) && "object-[25%_65%]"
+                            }`}
+                            alt={``}
+                            src={
+                              rows.locationImage ||
+                              `/images/partnership/partnership-1.jpeg`
+                            }
+                            width={1000}
+                            height={1000}
+                          />
+                        </div>
+                        <div
+                          className={`px-2 py-4 md:p-6 text-center text-text-themed flex-grow  flex flex-col justify-between items-center`}
+                        >
+                          <h1
+                            className={`text-base md:text-2xl font-heavitas text-primaryOrange align-middle `}
+                          >
+                            {rows.title}
+                          </h1>
+                          <div className="mt-4">
+                            <p
+                              className={`text-sm md:text-base font-barlow font-medium`}
+                            >
+                              {rows.address}
+                            </p>
+                            <p
+                              className={`text-sm md:text-base font-barlow font-medium`}
+                            >
+                              {rows.phone}
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+      </div>
     </>
   );
 }
