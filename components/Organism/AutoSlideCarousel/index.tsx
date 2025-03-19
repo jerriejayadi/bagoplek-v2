@@ -32,16 +32,13 @@ export function AutoSlideCarousel() {
     <Carousel
       plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]}
       //   setApi={setApi}
-      className="md:h-screen md:-mt-32"
+      className="md:-mt-32  overflow-hidden md:rounded-b-[96px] "
     >
-      <CarouselContent className="md:h-screen md:object-contain p-0 ml-0">
+      <CarouselContent className=" md:object-contain p-0 ml-0 ">
         {HERO_BANNER_LIST.map((rows, index) => (
-          <CarouselItem
-            key={`hero-banner-${index}`}
-            className="md:h-screen p-0"
-          >
+          <CarouselItem key={`hero-banner-${index}`} className=" p-0  ">
             <Image
-              className={`h-full w-full  object-contain`}
+              className={`h-fit w-full object-contain object-top`}
               alt={``}
               src={rows}
               width={2000}
