@@ -7,15 +7,22 @@ export default function Newsletter() {
       <div className={`flex relative w-full `}>
         <Image
           alt={``}
-          className={`w-full md:w-[597px] h-[480px] object-cover flex`}
-          src={`/newsletter-bg-1.jpeg`}
+          className={`w-full md:w-1/3 h-[480px] object-cover flex`}
+          src={`/images/newsletter/newsletter-bg-1.jpg`}
           width={1000}
           height={1000}
         />
         <Image
           alt={``}
-          className={`w-full h-[480px] object-cover hidden md:flex`}
-          src={`/newsletter-bg-2.jpeg`}
+          className={`w-1/3 h-[480px] object-cover hidden md:flex`}
+          src={`/images/newsletter/newsletter-bg-3.jpg`}
+          width={1000}
+          height={1000}
+        />
+        <Image
+          alt={``}
+          className={`w-1/3 h-[480px] object-cover hidden md:flex`}
+          src={`/images/newsletter/newsletter-bg-2.jpg`}
           width={1000}
           height={1000}
         />
@@ -25,7 +32,10 @@ export default function Newsletter() {
         >
           <div className={`md:w-[458px] p-6`}>
             <p className={`font-heavitas text-white md:text-2xl`}>
-              Want to <span className={`text-xl md:text-4xl`}>order & Further info?</span>
+              Want to{" "}
+              <span className={`text-xl md:text-4xl`}>
+                order & Further info?
+              </span>
             </p>
             <p className={`text-white my-4`}>Hubungi kami melalui Whatsapp</p>
 
@@ -45,7 +55,7 @@ export default function Newsletter() {
                   width={1000}
                   height={1000}
                 />
-                Chat 0895-1539-9006
+                Chat 089515399006
               </div>
 
               <div
