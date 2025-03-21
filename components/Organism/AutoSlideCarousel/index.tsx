@@ -32,7 +32,7 @@ export function AutoSlideCarousel() {
     <Carousel
       plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]}
       //   setApi={setApi}
-      className="md:-mt-32  overflow-hidden md:rounded-b-[96px] "
+      className="md:-mt-32  overflow-hidden  "
     >
       <CarouselContent className=" md:object-contain p-0 ml-0 ">
         {HERO_BANNER_LIST.map((rows, index) => (
