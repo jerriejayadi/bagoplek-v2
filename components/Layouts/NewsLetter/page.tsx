@@ -5,7 +5,7 @@ export default function Newsletter() {
   return (
     <div className={`w-full`}>
       <div className={`flex relative w-full `}>
-        <Image
+        {/* <Image
           alt={``}
           className={`w-full md:w-1/3 h-[480px] object-cover flex`}
           src={`/images/newsletter/newsletter-bg-1.jpg`}
@@ -23,6 +23,13 @@ export default function Newsletter() {
           alt={``}
           className={`w-1/3 h-[480px] object-cover hidden md:flex`}
           src={`/images/newsletter/newsletter-bg-2.jpg`}
+          width={1000}
+          height={1000}
+        /> */}
+        <Image
+          alt=""
+          src="/images/newsletter/newsletter-full.jpg"
+          className="w-full h-[480px] object-cover md:flex"
           width={1000}
           height={1000}
         />

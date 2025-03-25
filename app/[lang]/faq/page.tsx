@@ -156,30 +156,34 @@ export default function FAQ() {
   return (
     <main className={`flex flex-col relative items-center w-full`}>
       <div
-        className={` flex flex-col  items-center justify-center h-[850px] -mt-64 `}
+        className={` flex flex-col  items-center justify-center  md:-mt-64 h-fit `}
       >
         <Image
           alt={``}
-          className={`absolute -top-64 w-[1369px] h-[850px] rounded-2xl md:rounded-b-[120px] object-cover shrink-0`}
-          src={`/FAQ.jpg`}
+          className={`top-0 md:-top-64 w-full md:w-[1369px] h-[25%]  rounded-2xl md:rounded-b-[120px] object-contain  shrink-0`}
+          src={`/images/hero-new/halaman bawah.jpg`}
           width={1920}
           height={1080}
         />
         <div
-          className={` px-4 flex flex-col items-center justify-start tracking-wider z-30 absolute top-0`}
+          className={` px-4 flex flex-col items-center justify-start tracking-wider z-30 absolute top-0 py-8`}
         >
           <div
-            className={`font-heavitas text-4xl md:text-8xl  font-black text-text-themed mb-4`}
+            style={{ fontSize: "clamp(2rem, 5vw, 6rem)" }}
+            className={`font-heavitas  font-black text-text-themed mb-4`}
           >
             FAQ
           </div>
-          <div className={`text-4xl font-barlow  text-[#715B3C] text-center `}>
+          <div
+            style={{ fontSize: "clamp(2rem, 5vw, 6rem)" }}
+            className={`font-barlow  text-[#715B3C] text-center hidden sm:flex`}
+          >
             Frequently Asked Questions
           </div>
         </div>
       </div>
       <div
-        className={`w-full max-w-[1080px] px-4 flex flex-col items-start justify-center gap-6 mt-16 mb-40`}
+        className={`w-full max-w-[1080px] px-4 flex flex-col items-start justify-center gap-6 mt-20 md:mt-16 mb-40`}
       >
         {/* {FAQ_LIST.map((rows) => (
           <Accordion key={`faq-${rows.id}`} title={rows.question}>

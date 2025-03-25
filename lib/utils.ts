@@ -107,8 +107,8 @@ export function convertEmbeddedToDirectMapURL(embedUrl: string) {
 }
 
 export const HERO_BANNER_LIST = [
-  "/images/hero/hero_banner_1.jpg",
-  "/images/hero/hero_banner_2.jpg",
-  "/images/hero/hero_banner_3.jpg",
-  "/images/hero/hero_banner_4.jpg",
+  "/images/hero-new/5.jpg",
+  "/images/hero-new/3.jpg",
+  "/images/hero-new/2.jpg",
+  "/images/hero-new/1.jpg",
 ];

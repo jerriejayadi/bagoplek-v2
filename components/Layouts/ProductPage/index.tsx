@@ -10,7 +10,7 @@ const Products = ({ className }: ProductPageProps) => {
     <div className={`relative w-full shrink-0`}>
       <Image
         alt=""
-        src={`/images/product/thumbnail-2.jpg`}
+        src={`/images/hero-new/4.jpg`}
         className={`mt-28 md:mt-0`}
         width={1920}
         height={1080}
