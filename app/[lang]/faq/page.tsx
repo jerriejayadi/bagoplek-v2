@@ -154,19 +154,27 @@ export default function FAQ() {
     console.log(groupedFAQs[0]);
   }, [FAQ_LIST]);
   return (
-    <main className={`flex flex-col relative items-center w-full`}>
+    <main className={`flex flex-col items-center w-full`}>
       <div
-        className={` flex flex-col  items-center justify-center  md:-mt-64 h-fit `}
+        className={`relative  flex flex-col  items-center justify-center  md:-mt-64 h-fit md:rounded-b-[120px] overflow-hidden`}
       >
         <Image
           alt={``}
-          className={`top-0 md:-top-64 w-full md:w-[1369px] h-[25%]  rounded-2xl md:rounded-b-[120px] object-contain  shrink-0`}
-          src={`/images/hero-new/halaman bawah.jpg`}
+          className={`top-0 md:-top-64 w-full md:w-[1440px] h-fit md:h-[850px]  rounded-2xl md:rounded-b-[120px] object-cover  shrink-0`}
+          // src={`/images/hero-new/halaman bawah.jpg`}
+          src={`/FAQ.jpg`}
           width={1920}
           height={1080}
         />
+        <Image
+          alt=""
+          className="absolute w-8 bottom-4 left-4 md:w-20 md:bottom-10 md:left-10"
+          src={"/halal.png"}
+          width={1000}
+          height={1000}
+        />
         <div
-          className={` px-4 flex flex-col items-center justify-start tracking-wider z-30 absolute top-0 py-8`}
+          className={` px-4 flex flex-col items-center justify-start tracking-wider z-30 absolute md:top-64 py-8`}
         >
           <div
             style={{ fontSize: "clamp(2rem, 5vw, 6rem)" }}
@@ -175,8 +183,8 @@ export default function FAQ() {
             FAQ
           </div>
           <div
-            style={{ fontSize: "clamp(2rem, 5vw, 6rem)" }}
-            className={`font-barlow  text-[#715B3C] text-center hidden sm:flex`}
+            // style={{ fontSize: "clamp(2rem, 5vw, 6rem)" }}
+            className={`font-barlow text-4xl  text-[#715B3C] text-center hidden sm:flex`}
           >
             Frequently Asked Questions
           </div>
