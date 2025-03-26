@@ -169,7 +169,7 @@ export default function FAQ() {
         <Image
           alt=""
           className="absolute w-8 bottom-4 left-4 md:w-20 md:bottom-10 md:left-10"
-          src={"/halal.png"}
+          src={"/icons/halal_brown.png"}
           width={1000}
           height={1000}
         />
