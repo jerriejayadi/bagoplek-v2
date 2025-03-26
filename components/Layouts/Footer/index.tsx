@@ -218,11 +218,11 @@ export default function Footer() {
               <div
                 className={`flex items-start flex-wrap mt-6 md:mt-4 md:items-center  gap-6`}
               >
-                <Link href="https://tokopedia.link/svaZXbIQGNb" target="_blank">
+                <Link href="https://id.shp.ee/MxiAsFn" target="_blank">
                   <Image
                     className={`w-32 md:w-36 object-contain `}
                     alt=""
-                    src="/images/footer/shopeefood.png"
+                    src="/images/footer/shopee.png"
                     width={1000}
                     height={1000}
                   />
