@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Newsletter() {
   return (
@@ -28,8 +29,8 @@ export default function Newsletter() {
         /> */}
         <Image
           alt=""
-          src="/images/newsletter/newsletter-full.jpg"
-          className="w-full h-[480px] object-cover md:flex"
+          src="/images/hero-new/halaman bawah.jpg"
+          className="w-full h-[480px] object-cover object-bottom md:flex"
           width={1000}
           height={1000}
         />
@@ -46,10 +47,9 @@ export default function Newsletter() {
             </p>
             <p className={`text-white my-4`}>Hubungi kami melalui Whatsapp</p>
 
-            <div
-              onClick={() => {
-                console.log("hello");
-              }}
+            <Link
+              target="_blank"
+              href="https://wa.me/+6289515399006?text=Halo%2C%20saya%20ingin%20memesan%20Bagoplek%20dengan%20pengiriman%20menggunakan%20Paxel..%21"
               className={`bg-[#FFDA48] hover:bg-opacity-90 w-full   hover:cursor-pointer text-text-themed  flex items-center gap-2 justify-between transition-all duration-150 rounded-[20px] `}
             >
               <div
@@ -82,7 +82,7 @@ export default function Newsletter() {
                   />
                 </svg>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
