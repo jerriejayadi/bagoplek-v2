@@ -54,7 +54,7 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
               </div>
 
               <div
-                className={`grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-24 `}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-24 `}
               >
                 <ServeGuidanceStep
                   imageURL={"/serve-guidance/oven-new.png"}
@@ -131,7 +131,7 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
               <Image
                 alt=""
                 className="w-full shrink-0"
-                src="/serve-guidance/serving-guidance.png"
+                src="/images/product/serve_031008.png"
                 width={1080}
                 height={1080}
               />
