@@ -79,7 +79,7 @@ export default function Footer() {
       >
         <div className={`flex flex-col md:w-96`}>
           <Image
-            className={`w-40`}
+            className={`w-40 -ml-2`}
             alt={``}
             src={`/logo-bagoplek.png`}
             width={4096}
@@ -94,7 +94,7 @@ export default function Footer() {
             <Image
               alt=""
               className="w-40"
-              src="/LS_UNGU.png"
+              src="/icons/halal_horizontal.png"
               width={1000}
               height={1000}
             />

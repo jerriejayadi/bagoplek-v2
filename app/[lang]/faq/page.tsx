@@ -160,31 +160,31 @@ export default function FAQ() {
       >
         <Image
           alt={``}
-          className={`top-0 md:-top-64 w-full md:w-[1440px] h-fit md:h-[850px]  rounded-2xl md:rounded-b-[120px] object-cover  shrink-0`}
+          className={`top-0 md:-top-64 w-full md:w-[1360px] h-fit md:h-[850px]  rounded-2xl md:rounded-b-[120px] object-cover  shrink-0`}
           // src={`/images/hero-new/halaman bawah.jpg`}
           src={`/FAQ.jpg`}
           width={1920}
           height={1080}
         />
-        <Image
+        {/* <Image
           alt=""
           className="absolute w-8 bottom-4 left-4 md:w-20 md:bottom-10 md:left-10"
           src={"/icons/halal_brown.png"}
           width={1000}
           height={1000}
-        />
+        /> */}
         <div
-          className={` px-4 flex flex-col items-center justify-start tracking-wider z-30 absolute md:top-64 py-8`}
+          className={` px-4 flex flex-col items-center justify-start tracking-wider z-30 absolute top-0 md:top-64 py-8`}
         >
           <div
-            style={{ fontSize: "clamp(2rem, 5vw, 6rem)" }}
-            className={`font-heavitas  font-black text-text-themed mb-4`}
+            // style={{ fontSize: "clamp(2rem, 5vw, 6rem)" }}
+            className={`font-heavitas text-3xl sm:text-6xl md:text-8xl  font-black text-text-themed mb-1 sm:mb-4`}
           >
             FAQ
           </div>
           <div
             // style={{ fontSize: "clamp(2rem, 5vw, 6rem)" }}
-            className={`font-barlow text-4xl  text-[#715B3C] text-center hidden sm:flex`}
+            className={`font-barlow text-lg sm:text-4xl  text-[#715B3C] text-center flex`}
           >
             Frequently Asked Questions
           </div>

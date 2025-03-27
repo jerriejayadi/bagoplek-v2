@@ -15,7 +15,7 @@ export const LOCATION_LIST: LocationProps[] = [
   {
     title: "Bagoplek Office",
     address: "Jl. Mojo No.11B, Bareng, Malang",
-    phone: "+62-895-1539-9006",
+    phone: "+62 895 1539 9006",
     city: "Malang",
     googleMapsURL: "https://maps.app.goo.gl/gCkSrh58QtXe5JgL9",
     locationImage: "/location/Mojo.jpg",
@@ -25,7 +25,7 @@ export const LOCATION_LIST: LocationProps[] = [
   {
     title: "Pasar Oro Oro Dowo Malang",
     address: "Jl. Guntur No.20, Oro-oro Dowo, Malang",
-    phone: "+62-895-1539-9007",
+    phone: "+62 895 1539 9007",
     city: "Malang",
     googleMapsURL: "https://maps.app.goo.gl/FNsMmEA8oZf18TUb7",
     locationImage: "/location/OroOroDowo.JPG",
@@ -35,7 +35,7 @@ export const LOCATION_LIST: LocationProps[] = [
   {
     title: "Superindo Bendungan Sutami Malang",
     address: "Jl. Bendungan Sutami, Gading Kasri, Malang",
-    phone: "+62-895-1539-9006",
+    phone: "+62 895 1539 9006",
     city: "Malang",
     googleMapsURL: "https://maps.app.goo.gl/7GmBFNU3JNvGBizL8",
     locationImage: "/location/Sutami3.JPG",
@@ -45,7 +45,7 @@ export const LOCATION_LIST: LocationProps[] = [
   {
     title: "Superindo Langsep Malang",
     address: "Jl. Raya Langsep No.5, Bareng, Malang",
-    phone: "+62-895-1539-9006",
+    phone: "+62 895 1539 9006",
     city: "Malang",
     googleMapsURL: "https://maps.app.goo.gl/yLSD7J6GSZm85EGh8",
     locationImage: "",
@@ -55,7 +55,7 @@ export const LOCATION_LIST: LocationProps[] = [
   {
     title: "Lai-Lai Express",
     address: "Jl. Puncak Mandala no. 19 Malang",
-    phone: "+62-895-1539-9006",
+    phone: "+62 895 1539 9006",
     city: "Malang",
     googleMapsURL: "https://maps.app.goo.gl/9PoUcpp1tUD8fkHL7",
     locationImage: "/location/LaiLai.JPG",
@@ -63,24 +63,24 @@ export const LOCATION_LIST: LocationProps[] = [
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3259198495343!2d112.60190820876824!3d-7.965230492026447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788352d754fd11%3A0x36471d5010ee3e6b!2sBagoplek%20-%20Lai%20Lai%20Express!5e0!3m2!1sen!2sid!4v1730086007844!5m2!1sen!2sid&zoom=20",
   },
   {
-    title: "Citraland Fresh Market",
-    address: "Jl. Taman Puspa Raya, Surabaya",
-    phone: "+62-852-9878-2570",
-    city: "Surabaya",
-    googleMapsURL: "https://maps.app.goo.gl/AeKfjcKNzSH2zgvW9",
-    locationImage: "/location/Surabaya.JPG",
-    embedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.693872285857!2d112.64301600875821!3d-7.275632192701154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fdbf66b10c83%3A0xa1f01db494e731b2!2sBagoplek%20-%20Citraland!5e0!3m2!1sen!2sid!4v1730086047860!5m2!1sen!2sid&zoom=20",
-  },
-  {
     title: "Indomaret Ahmad Yani",
     address: "Jl. Ahmad Yani, Ngaglik, Batu",
-    phone: "+62-895-1539-9006",
+    phone: "+62 895 1539 9006",
     city: "Batu",
     googleMapsURL: "https://maps.app.goo.gl/gBvLsWQRa2LmLNf97",
     locationImage: "/location/Batu.jpg",
     embedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.217015689267!2d112.52041230876674!3d-7.872346392117084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788708e4eeb85b%3A0xd1cbd82041e960a2!2sBagoplek%20-%20Batu!5e0!3m2!1sen!2sid!4v1730086084120!5m2!1sen!2sid&zoom=20",
+  },
+  {
+    title: "Citraland Fresh Market",
+    address: "Jl. Taman Puspa Raya, Surabaya",
+    phone: "+62 852 9878 2570",
+    city: "Surabaya",
+    googleMapsURL: "https://maps.app.goo.gl/AeKfjcKNzSH2zgvW9",
+    locationImage: "/location/Surabaya.JPG",
+    embedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.693872285857!2d112.64301600875821!3d-7.275632192701154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fdbf66b10c83%3A0xa1f01db494e731b2!2sBagoplek%20-%20Citraland!5e0!3m2!1sen!2sid!4v1730086047860!5m2!1sen!2sid&zoom=20",
   },
 ];
 
