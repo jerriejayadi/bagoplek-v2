@@ -174,7 +174,7 @@ export default function FAQ() {
           height={1000}
         /> */}
         <div
-          className={` px-4 flex flex-col items-center justify-start tracking-wider z-30 absolute top-0 md:top-64 py-8`}
+          className={` px-4 flex flex-col items-center justify-start tracking-wider z-30 absolute top-0 md:top-64 py-8 md:py-0`}
         >
           <div
             // style={{ fontSize: "clamp(2rem, 5vw, 6rem)" }}
