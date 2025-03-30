@@ -162,7 +162,7 @@ export default function FAQ() {
           alt={``}
           className={`top-0 md:-top-64 w-full md:w-[1360px] h-fit md:h-[850px]  rounded-2xl md:rounded-b-[120px] object-cover  shrink-0`}
           // src={`/images/hero-new/halaman bawah.jpg`}
-          src={`/FAQ.jpg`}
+          src={`/images/faq/banner.jpg`}
           width={1920}
           height={1080}
         />
