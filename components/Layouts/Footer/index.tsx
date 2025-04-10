@@ -79,7 +79,7 @@ export default function Footer() {
       >
         <div className={`flex flex-col md:w-96`}>
           <Image
-            className={`w-40`}
+            className={`w-40 -ml-2`}
             alt={``}
             src={`/logo-bagoplek.png`}
             width={4096}
@@ -94,7 +94,7 @@ export default function Footer() {
             <Image
               alt=""
               className="w-40"
-              src="/LS_UNGU.png"
+              src="/icons/halal_horizontal.png"
               width={1000}
               height={1000}
             />
@@ -215,12 +215,14 @@ export default function Footer() {
             </div>
             <div>
               <h1 className={`font-bold`}>{`Online Stores`.toUpperCase()}</h1>
-              <div className={`flex flex-wrap items-center mt- gap-4`}>
-                <Link href="https://tokopedia.link/svaZXbIQGNb" target="_blank">
+              <div
+                className={`flex items-start flex-wrap mt-6 md:mt-4 md:items-center  gap-6`}
+              >
+                <Link href="https://id.shp.ee/MxiAsFn" target="_blank">
                   <Image
-                    className={`w-36 object-contain `}
+                    className={`w-32 md:w-36 object-contain `}
                     alt=""
-                    src="/shopee.png"
+                    src="/images/footer/shopee.png"
                     width={1000}
                     height={1000}
                   />
@@ -230,9 +232,9 @@ export default function Footer() {
                   target="_blank"
                 >
                   <Image
-                    className={`w-36 object-contain shrink-0  h-auto ml-4`}
+                    className={`w-32 md:w-36 object-contain shrink-0  h-auto -ml-1.5`}
                     alt=""
-                    src="/tokopedia.png"
+                    src="/images/footer/tokopedia.png"
                     width={1000}
                     height={1000}
                   />
@@ -242,22 +244,21 @@ export default function Footer() {
                   target="_blank"
                 >
                   <Image
-                    className={`w-32 shrink-0  h-auto ml-4`}
+                    className={`w-32 md:w-36 shrink-0  h-auto`}
                     alt=""
-                    src="/grab-food.png"
+                    src="/images/footer/grabfood.png"
                     width={1000}
                     height={1000}
                   />
                 </Link>
                 <Link
-                  href="https://wa.me/+6289515399006?text=Halo%2C%20saya%20ingin%20memesan%20Bagoplek%20dengan%20pengiriman%20menggunakan%20Paxel..%21
-"
+                  href="https://wa.me/+6289515399006?text=Halo%2C%20saya%20ingin%20memesan%20Bagoplek%20dengan%20pengiriman%20menggunakan%20Paxel..%21"
                   target="_blank"
                 >
                   <Image
-                    className={`w-32 shrink-0  h-auto ml-4`}
+                    className={`w-32 md:w-36 shrink-0  h-auto`}
                     alt=""
-                    src="/paxel-logo.svg"
+                    src="/images/footer/paxel-logo.svg"
                     width={1000}
                     height={1000}
                   />

@@ -42,7 +42,7 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
         <div
           className={`flex flex-col w-full  gap-10 md:gap-20 items-center justify-center md:items-start`}
         >
-          <div className={`flex w-full `}>
+          <div className={`flex w-full justify-between `}>
             <div className={`flex flex-col w-full md:w-[60%] gap-7 md:gap-14`}>
               <div
                 className={`text-left font-heavitas text-2xl  md:text-4xl leading-normal tracking-wider sm:leading-loose text-text-themed`}
@@ -54,7 +54,7 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
               </div>
 
               <div
-                className={`grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-24 `}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-24 `}
               >
                 <ServeGuidanceStep
                   imageURL={"/serve-guidance/oven-new.png"}
@@ -127,7 +127,16 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
                 </div> */}
               </div>
             </div>
-            <div
+            <div className="w-[40%] px-20 items-center justify-center relative hidden md:flex shrink-0">
+              <Image
+                alt=""
+                className="w-full shrink-0"
+                src="/images/product/serve 4.png"
+                width={1080}
+                height={1080}
+              />
+            </div>
+            {/* <div
               className={`w-[40%]  items-center justify-center relative hidden sm:flex`}
             >
               <div
@@ -141,7 +150,7 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
                   height={434}
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>{" "}

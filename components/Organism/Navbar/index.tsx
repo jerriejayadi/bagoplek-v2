@@ -14,13 +14,13 @@ const Navbar = () => {
   const sideBarRef = useRef<HTMLDivElement>(null);
 
   const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
-      // if scroll down hide the navbar
-      setShow(false);
-    } else {
-      // if scroll up show the navbar
-      setShow(true);
-    }
+    // if (window.scrollY > lastScrollY) {
+    //   // if scroll down hide the navbar
+    //   setShow(false);
+    // } else {
+    //   // if scroll up show the navbar
+    //   setShow(true);
+    // }
 
     // remember current page location to use in the next move
     setLastScrollY(window.scrollY);
@@ -61,7 +61,11 @@ const Navbar = () => {
       <div
         className={`flex items-center justify-center md:justify-between sticky md:fixed  top-0 px-7 md:px-14 py-5  w-full max-w-[1920px] z-50 transition-all duration-500 ${
           show ? "translate-y-0" : "-translate-y-full md:translate-y-0"
-        } ${navbarBackground ? "bg-[#FEFCF1]" : "bg-transparent"} z-50`}
+        } ${
+          navbarBackground
+            ? "bg-[#FEFCF1] border-b border-neutral-200"
+            : "bg-transparent"
+        } z-50`}
       >
         {/* Hamburger Toggle */}
         <button
@@ -89,7 +93,7 @@ const Navbar = () => {
         {/* Bagoplek Logo */}
         <Link href="/" className={``}>
           <Image
-            className={`h-16 w-auto`}
+            className={`h-10 w-auto md:h-16`}
             src={`/logo-bagoplek.png`}
             alt=""
             width={1000}

@@ -1,21 +1,36 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Newsletter() {
   return (
     <div className={`w-full`}>
       <div className={`flex relative w-full `}>
-        <Image
+        {/* <Image
           alt={``}
-          className={`w-full md:w-[597px] h-[480px] object-cover flex`}
-          src={`/newsletter-bg-1.jpeg`}
+          className={`w-full md:w-1/3 h-[480px] object-cover flex`}
+          src={`/images/newsletter/newsletter-bg-1.jpg`}
           width={1000}
           height={1000}
         />
         <Image
           alt={``}
-          className={`w-full h-[480px] object-cover hidden md:flex`}
-          src={`/newsletter-bg-2.jpeg`}
+          className={`w-1/3 h-[480px] object-cover hidden md:flex`}
+          src={`/images/newsletter/newsletter-bg-3.jpg`}
+          width={1000}
+          height={1000}
+        />
+        <Image
+          alt={``}
+          className={`w-1/3 h-[480px] object-cover hidden md:flex`}
+          src={`/images/newsletter/newsletter-bg-2.jpg`}
+          width={1000}
+          height={1000}
+        /> */}
+        <Image
+          alt=""
+          src="/images/hero-new/halaman bawah.jpg"
+          className="w-full h-[480px] object-cover object-bottom md:flex"
           width={1000}
           height={1000}
         />
@@ -25,14 +40,16 @@ export default function Newsletter() {
         >
           <div className={`md:w-[458px] p-6`}>
             <p className={`font-heavitas text-white md:text-2xl`}>
-              Want to <span className={`text-xl md:text-4xl`}>order & Further info?</span>
+              Want to{" "}
+              <span className={`text-xl md:text-4xl`}>
+                order & Further info?
+              </span>
             </p>
             <p className={`text-white my-4`}>Hubungi kami melalui Whatsapp</p>
 
-            <div
-              onClick={() => {
-                console.log("hello");
-              }}
+            <Link
+              target="_blank"
+              href="https://wa.me/+6289515399006?text=Halo%2C%20saya%20ingin%20memesan%20Bagoplek%20dengan%20pengiriman%20menggunakan%20Paxel..%21"
               className={`bg-[#FFDA48] hover:bg-opacity-90 w-full   hover:cursor-pointer text-text-themed  flex items-center gap-2 justify-between transition-all duration-150 rounded-[20px] `}
             >
               <div
@@ -45,7 +62,7 @@ export default function Newsletter() {
                   width={1000}
                   height={1000}
                 />
-                Chat 081242424543
+                Chat +62 895 1539 9006
               </div>
 
               <div
@@ -65,7 +82,7 @@ export default function Newsletter() {
                   />
                 </svg>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
