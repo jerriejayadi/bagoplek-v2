@@ -42,6 +42,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={lang}>
+      <head>
+        <link rel="icon" href="/icon.ico" />
+      </head>
       <body
         className={`${inter.className} ${heavitas.variable} ${barlow.variable} ${lato.className}   max-w-[1920px] mx-auto bg-[#FFFDF3]`}
       >
