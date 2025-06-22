@@ -39,8 +39,8 @@ export function AutoSlideCarousel() {
           <CarouselItem key={`hero-banner-${index}`} className=" p-0  ">
             <Image
               className={`h-fit w-full object-contain object-top`}
-              alt={``}
-              src={rows}
+              alt={rows.alt}
+              src={rows.src}
               width={2000}
               height={2000}
             />

@@ -131,7 +131,7 @@ const ServeGuidancePage = ({ className }: ServeGuidancePageProps) => {
               <Image
                 alt=""
                 className="w-full shrink-0"
-                src="/images/product/serve 4.png"
+                src="/images/product/servee baruuuuu.png"
                 width={1080}
                 height={1080}
               />

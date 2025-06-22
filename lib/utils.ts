@@ -107,8 +107,24 @@ export function convertEmbeddedToDirectMapURL(embedUrl: string) {
 }
 
 export const HERO_BANNER_LIST = [
-  "/images/hero-new/5.jpg",
-  "/images/hero-new/3.jpg",
-  "/images/hero-new/2.jpg",
-  "/images/hero-new/1.jpg",
+  {
+    alt: "Paket Wedding Bagoplek Untuk Acara Nikahan",
+    src: "/images/hero-new/poster wedding web.jpg",
+  },
+  {
+    alt: "Bagoplek Bakso Goreng Ayam Halal Malang Surabaya",
+    src: "/images/hero-new/5.jpg",
+  },
+  {
+    alt: "Bagoplek Bakso Goreng Ayam Sambal Halal Malang Surabaya",
+    src: "/images/hero-new/3.jpg",
+  },
+  {
+    alt: "Bagoplek Bakso Goreng Ayam Paketan Halal Malang Surabaya",
+    src: "/images/hero-new/2.jpg",
+  },
+  {
+    alt: "Bagoplek Bakso Goreng Ayam Malang Halal",
+    src: "/images/hero-new/1.jpg",
+  },
 ];
